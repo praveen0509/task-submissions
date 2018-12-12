@@ -1,6 +1,4 @@
 import java.io.*;
-import java.lang.ArithmeticException;
-
 
 
 public class task_prgs

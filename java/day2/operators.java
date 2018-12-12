@@ -6,13 +6,21 @@ public class operators
   public static void main(String args[])
   {
    int a=10,b=20,c=30;
+   System.out.println("a="+a+"  b="+b+"  c="+c);
    arithmetic(a,b);
    assignment(a,b);
    //ternary(a,b);
    relation(a,b);
-   System.out.println("a="+a+"  b="+b+"  c="+c);
+   bitwise(a,b);
   }
+  
+  public static void bitwise(int a, int b)
+  {
+   System.out.println("a&b:"+(a&b)+"  a|b:"+(a|b)+"  a^b"+(a^b));
+   }
 
+
+   
   public static void arithmetic(int a,int b)
   {
    System.out.println("a=10,b=20 values:-- +:-"+(a+b) +" -:"+(a-b)+"  *:-"+(a*b)+"  /:-"+(b/a) + "  %:-"+(b%a));
