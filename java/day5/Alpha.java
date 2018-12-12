@@ -1,6 +1,6 @@
 import java.io.*;
 
-public class alpha
+public class Alpha
 {
   public static void main(String args[])
   {

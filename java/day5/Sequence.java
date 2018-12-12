@@ -1,6 +1,7 @@
 import java.io.*;
+import java.util.*;
 
-public class sequence
+public class Sequence
 {
   public static void main(String args[])
   {
@@ -9,12 +10,21 @@ public class sequence
    Scanner ob=new Scanner(System.in);
    n=ob.nextInt();
    System.out.println(i);
+   /*
    for(i=2;i<=n;i++)
    {
     System.out.println(i+j);
     j=i+j-1;
+   } */
+  
+   i=2;
+   while(i<=n)
+   {
+    System.out.println(i+j);
+    j=i+j-1;
+    i++;
    }
-
+   
   }
 
 }
