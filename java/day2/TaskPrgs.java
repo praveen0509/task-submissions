@@ -1,7 +1,7 @@
 import java.io.*;
 
 
-public class task_prgs
+public class TaskPrgs
 {
   public static void main(String args[])
   {
