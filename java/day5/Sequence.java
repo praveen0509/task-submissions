@@ -5,23 +5,23 @@ public class Sequence
 {
   public static void main(String args[])
   {
-   int i=1,j=0,n;
+   int i,j=1,n;
    System.out.println("enter n value");
    Scanner ob=new Scanner(System.in);
    n=ob.nextInt();
-   System.out.println(i);
+   //System.out.println(i);
    /*
-   for(i=2;i<=n;i++)
+   for(i=1;i<=n;i++)
    {
     System.out.println(i+j);
-    j=i+j-1;
+    j=i+j;
    } */
   
-   i=2;
+   i=1;
    while(i<=n)
    {
     System.out.println(i+j);
-    j=i+j-1;
+    j=i+j;
     i++;
    }
    
