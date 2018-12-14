@@ -1,7 +1,8 @@
+package Day6;
 import java.util.Scanner;
 
 
-public class day1312_strings 
+public class StringMethods 
 {
 
 	public static void main(String args[])
@@ -33,7 +34,7 @@ public class day1312_strings
 		String s4=String.valueOf(number);
 		System.out.println("The string converted from string:-"+s4);
 		                                          //input for characters+integers gives error 
-		                                         //valueOf() coverts any datatype to string
+		                                         //valueOf() converts any datatype to string
 		System.out.println("s1.replace('b','B'):-"+s1.replace('b','B'));   
 		                                         // giving ascii value gives error  s1.replace(98, 66)
 		                                         // replaces character

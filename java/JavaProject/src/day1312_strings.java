@@ -7,9 +7,10 @@ public class day1312_strings
 	public static void main(String args[])
 	{
 		Scanner ob=new Scanner(System.in);
-		// System.out.println("enter string and Substring:");
-		// String s1=ob.next();
-		// String s2=ob.next();
+		/* System.out.println("enter string and Substring:");
+		 String s1=ob.next();
+		 String s2=ob.next();  */
+		
 		String s1="Semanticbits ";
 		String s2="India ";
 		System.out.println("length:"+s1.length());   
@@ -18,10 +19,10 @@ public class day1312_strings
 		System.out.println("charAt(5):-"+s1.charAt(5));
 		System.out.println("s1.concat(s2):-"+s1.concat(s2));
 		System.out.println("s1.compareTo(s2):-"+s1.compareTo(s2)); 
-		                                             //s1=s2 ---->zero
-		                                             //s1>s2 ---->the difference of ascii values between two characters
+		                                          /* s1==s2 ---->zero
+		                                             s1>s2 ---->the difference of ascii values between two characters
 		                                                            //positive
-		                                             //s1<s2 ----> negative value
+		                                             s1<s2 ----> negative value */
 		System.out.println("s1.trim():-"+s1.trim()+"   s2.trim():-"+s2.trim());
 		                                             //removes spaces in string		
 		System.out.println("s1.isEmpty():-"+s1.isEmpty()+"   s2.isEmpty():-"+s2.isEmpty());
