@@ -15,7 +15,8 @@ public class MultiplicationTable
        upto=ob.nextShort();
        
        for(short i=1;i<=upto;i++)
-    	   System.out.println(table+"x"+i+" = "+(table*i));   	   
+    	   System.out.println(table+"x"+i+" = "+(table*i));   
+       ob.close();
 	}
 
 }

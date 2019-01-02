@@ -1,12 +1,10 @@
 package Day6;
-import java.util.*;
+import java.util.Scanner;
 public class StringPalindrome 
 {
 	public static void main(String[] args)
 	{
-	   
 		String s1;
-		StringBuffer s3=new StringBuffer("madam");
 		Scanner ob=new Scanner(System.in);
 		System.out.println("enter a string");
 		s1=ob.next();
@@ -23,7 +21,20 @@ public class StringPalindrome
 		if(s1.equals(s2.toString()))          
 			System.out.println("palindrome");
 		else
-			System.out.println("not palindrome");	
+			System.out.println("not palindrome");
+		ob.close();
 	}
 
 }
+
+/*
+output:
+    enter a string
+    madam
+    reverse string:-madam
+    palindrome
+
+	enter a string
+	pavan
+	reverse string:-navap
+	not palindrome */

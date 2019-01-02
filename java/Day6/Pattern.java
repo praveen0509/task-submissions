@@ -1,12 +1,11 @@
 package Day6;
-import java.util.*;
+import java.util.Scanner;
 
 public class Pattern
 {
 	public static void main(String args[])
 	{
 	   short num,space,star=0,store=1;
-	   boolean flag=true;
 	   Scanner ob=new Scanner(System.in);
 	   System.out.println("Enter n value:");
 	   num=ob.nextShort();
@@ -29,8 +28,27 @@ public class Pattern
 		  for(; star<=lineNo; star++)      //star printing for loop
 			  System.out.print("* ");
 		  System.out.println("");		   
-		   
 	   }
+	   
+	   ob.close();
 	}
 	
 }
+
+/*
+output:
+	Enter n value:
+		7
+		      * 
+		     * * 
+		    * * * 
+		   * * * * 
+		  * * * * * 
+		 * * * * * * 
+		* * * * * * * 
+		 * * * * * * 
+		  * * * * * 
+		   * * * * 
+		    * * * 
+		     * * 
+		      *        */

@@ -45,7 +45,7 @@ public class MatrixTranspose
 		  for(short i=0;i<m;i++)
 			  for(short j=0;j<n;j++)
 				  matrix[i][j]=obj.nextShort(); 
-		  //obj.close();
+		  obj.close();
 	   }
 	   
 	   

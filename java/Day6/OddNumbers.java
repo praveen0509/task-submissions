@@ -1,16 +1,11 @@
 package Day6;
-import java.util.*;
+import java.util.Scanner;
 
 public class OddNumbers 
 {
 	public static void main(String args[])
 	  {
-		short num,a=2;
-		                       //using short for memory utilization
-	    a+=4;                  
-	    System.out.println(a);
-	                            //checking for a+=4 (not need typecast) 
-	                           // a=a+4  need typecast
+		short num;
 		System.out.println("enter a number:-");
 		Scanner ob=new Scanner(System.in);
 		num=ob.nextShort();
@@ -19,3 +14,32 @@ public class OddNumbers
 		ob.close();
 	  }	
 }
+
+/*
+output:
+enter a number:-
+45
+1
+3
+5
+7
+9
+11
+13
+15
+17
+19
+21
+23
+25
+27
+29
+31
+33
+35
+37
+39
+41
+43
+45
+*/
