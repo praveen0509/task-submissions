@@ -9,14 +9,13 @@ public class MatrixSum
 	     byte num=1;
 	     Scanner ob=new Scanner(System.in);
 	     System.out.println("enter rows and columns of 1st matrix:");
-	   
 	     m=ob.nextShort();
 	     n=ob.nextShort();
 	     System.out.println("enter rows and columns of 2nd matrix:");
 	     p=ob.nextShort();
 	     q=ob.nextShort();
 	   
-      if(m==p && n==q)                         //checking rows and columns of two matrices
+      if(m==p && n==q)                    //checking rows and columns of two matrices
       {
     	  while(num!=0)
     	  {
@@ -64,7 +63,7 @@ public class MatrixSum
 	  for(short i=0;i<m;i++)
 		  for(short j=0;j<n;j++)
 			  matrix1[i][j]=obj.nextShort(); 
-	  obj.close();
+	  
    }
    
    //display()
@@ -89,5 +88,40 @@ enter rows and columns of 2nd matrix:
 3
 4
 addition not possible
+
+//
+Enter stop==0 or continue!=0 
+2
+enter rows and columns of 1st matrix:
+2
+3
+enter rows and columns of 2nd matrix:
+2
+3
+Enter values for 1st matrix
+2
+3
+4
+5
+6
+6
+Enter values for 2nd matrix
+1
+2
+3
+4
+5
+6
+1st matrix is:
+2 3 4 
+5 6 6 
+2nd matrix is:
+1 2 3 
+4 5 6 
+the addition of two matrices is:
+3 5 7 
+9 11 12 
+Enter stop==0 or continue!=0 
+
 
  */
