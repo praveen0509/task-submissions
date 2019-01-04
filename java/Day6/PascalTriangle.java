@@ -1,3 +1,14 @@
+/*
+ * Write a program to print Pascal's triangle
+        Input number of rows: 5                                                          
+              1                                                                          
+             1 1                                                                         
+            1 2 1                                                                        
+           1 3 3 1                                                                       
+          1 4 6 4 1
+
+ */
+
 package Day6;
 import java.util.Scanner;
 

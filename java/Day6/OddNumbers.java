@@ -1,3 +1,9 @@
+/*
+ * Write a program to print odd numbers upto given number
+	o/p: 1, 3, 5, 7, ....., 99
+
+ */
+
 package Day6;
 import java.util.Scanner;
 

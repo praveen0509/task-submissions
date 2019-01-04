@@ -2,15 +2,13 @@ package Day6;
 
 import java.util.Scanner;
 
-public class MatrixTranspose
-{
-
-	public static void main(String[] args)
-	 {
+public class MatrixTranspose{
+	
+	public static void main(String[] args) {
 		   
 		 short m,n;
 	     Scanner ob=new Scanner(System.in);
-	     System.out.println("enter rows and columns of matrix:");
+	     System.out.println("Enter rows and columns of matrix:");
 	     m=ob.nextShort();
 	     n=ob.nextShort();
 	     
@@ -19,7 +17,6 @@ public class MatrixTranspose
 	     input(m,n,matrix1);
 	     
 	     short matrix2[][]=new short[n][m];               //matrix2==transpose matrix
-	     
 	     System.out.println("The matrix is:");
 	     display(matrix1,n,m);                            //displaying first matrix
 	     
@@ -31,16 +28,14 @@ public class MatrixTranspose
 	 }
 	   
 	
-	   public static void transpose(short matrix1[][],short matrix2[][], short m, short n)
-	   {
+	   public static void transpose(short matrix1[][],short matrix2[][], short m, short n)  {
 		   for(short i=0;i<m;i++)
 		      for(short j=0;j<n;j++)
 		        matrix2[j][i] = matrix1[i][j];
 	   }
 	   
 	   
-	   public static void input(short m,short n, short matrix[][])
-	   {
+	   public static void input(short m,short n, short matrix[][])  {
 		  Scanner obj=new Scanner(System.in);
 		  for(short i=0;i<m;i++)
 			  for(short j=0;j<n;j++)
@@ -50,15 +45,37 @@ public class MatrixTranspose
 	   
 	   
 	   
-	   public static void display(short matrix2[][],short m,short n)
-	   {
-		   for(short i=0;i<n;i++)
-		   {
+	   public static void display(short matrix2[][],short m,short n) {
+		   for(short i=0;i<n;i++)   {
 			   for(short j=0;j<m;j++)
-		        System.out.print(matrix2[i][j]+" ");
+		           System.out.print(matrix2[i][j]+" ");
 		       System.out.println(" ");
 	       }
 	   }
-	   
-	   
 }
+
+
+
+/*
+Enter rows and columns of matrix:
+2
+3
+Enter values for matrix
+2
+3
+4
+5
+6
+7
+The matrix is:
+2 3 4  
+5 6 7  
+The transpose of matrix is:
+2 5  
+3 6  
+4 7  
+
+ */
+
+
+

@@ -1,3 +1,12 @@
+/*
+ *  Write a program to find below ones from the given string
+	a> the positions of substring
+	b> repeated count of substring
+	c> remove the occurrence of the substring from main string and print
+
+ */
+
+
 package Day6;
 import java.util.*;
 

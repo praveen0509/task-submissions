@@ -1,3 +1,10 @@
+/*
+ * Do the following exercise
+	> Create an abstract class Parent with property details and an abstract method 'calculate()'.
+	> Now derive 'Son' class from 'Parent' class and calculate the son's property by implementing the 'calculate()' method.
+
+ */
+
 package Day6;
 import java.util.Scanner;
 
@@ -11,8 +18,8 @@ public class Abstract_method_calculate {
 
 //parent class
 abstract class Parent {
-	public int id;
-	public String name;
+	public int propertyValue;
+	public String propertyName;
 		 
 	abstract void calculate();
 }
@@ -21,10 +28,20 @@ abstract class Parent {
 class Son extends Parent {
 	public void calculate(){
 		Scanner  ob=new Scanner(System.in);
-		System.out.println("Enter student Id and name:-");
-		id=ob.nextInt();
-		name=ob.next();
-		System.out.println("Student Id="+id+" name="+name);
+		int propertySum=0;
+		byte num=1;
+		while(num!=0) {
+			System.out.println("\nEnter son propertyName and PropertyValue:-");
+			propertyName=ob.next();
+			propertyValue=ob.nextInt();
+			System.out.println("Son PropertyValue="+ propertyValue +"\nPropertyName="+propertyName);
+			propertySum+=propertyValue;			
+			System.out.println("Enter not 0==continue and 0==Stop");
+			num=ob.nextByte();
+		}
+		
+		System.out.println("Son Property Value:-"+propertySum);
+		ob.close();	
 	}
 	
 }

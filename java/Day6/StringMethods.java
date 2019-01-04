@@ -1,3 +1,6 @@
+// Write a program to use all possible methods of String operations
+
+
 package Day6;
 import java.util.Scanner;
 

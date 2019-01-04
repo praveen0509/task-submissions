@@ -1,3 +1,9 @@
+/*
+ * Write a method to accept a year number, test and display whether the given number is leap year or not
+
+ */
+
+
 package Day6;
 import java.util.Scanner;
 

@@ -1,3 +1,8 @@
+/* Test whether given number is prime or not
+	i/p: 21 o/p: prime number
+*/
+
+
 package Day6;
 import java.util.Scanner;
 

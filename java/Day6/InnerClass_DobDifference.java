@@ -17,8 +17,8 @@ public class InnerClass_DobDifference {
     	 */
          
          Student std=new Student();
-         Student.Dob dob1=std.new Dob((short)10,( short)12, (short)1994);
-         Student.Dob dob2=std.new Dob((short)10,( short)8, (short)1996);
+         Student.Dob dob1=std.new Dob((short)26,( short)05, (short)1994);
+         Student.Dob dob2=std.new Dob((short)27,( short)06, (short)1996);
          
          ob.close();
      }

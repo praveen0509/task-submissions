@@ -1,3 +1,6 @@
+//Find given String Is Palindrome or Not
+
+
 package Day6;
 import java.util.Scanner;
 public class StringPalindrome 

@@ -1,3 +1,5 @@
+//find Number is Even or Odd
+
 package Day6;
 import java.util.Scanner;
 

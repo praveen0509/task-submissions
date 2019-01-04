@@ -1,3 +1,13 @@
+/*
+ * Display multiplication table
+	5*1=5
+	5*2=10
+	...
+	5*10=50
+
+ */
+
+
 package Day6;
 import java.util.*;
 
