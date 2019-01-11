@@ -28,3 +28,17 @@ public class Sequence
   }
 
 }
+
+/*
+output:
+enter n value
+7
+
+2
+4
+7
+11
+16
+22
+29
+*/

@@ -1,4 +1,4 @@
-/*
+  /*
  *  Write a program to find below ones from the given string
 	a> the positions of substring
 	b> repeated count of substring

@@ -42,23 +42,22 @@ class Student {
 	public class Dob {
 		 public short mm,yy;
 		 Dob() {
-			 Scanner obj=new Scanner(System.in);
-			 short yy=obj.nextShort();
-	         short mm=obj.nextShort();
-	         //short dd=obj.nextShort();			
+			  Scanner obj=new Scanner(System.in);
+			  short yy=obj.nextShort();
+	                  short mm=obj.nextShort();
+	                  //short dd=obj.nextShort();			
 	         
 			//this.dd=dd;
 			this.mm=mm;
 			this.yy=yy;
 			System.out.println("dateOfBirth:"+mm+"-"+yy);
-          }			 
+                     }			 
 		short monthDays[]=new short[]{31,28,31,30,31,30,31,31,30,31,30,31};
 		boolean flag=true;
 		
 		
 		public short daysDifference(short month) {
 			short sum=0, iter;
-			boolean flag=true;
 			//calculating days from given month to 'Dec' month 
 			if(flag) {
 				for(iter=(short)(month-1); iter<11; iter++)

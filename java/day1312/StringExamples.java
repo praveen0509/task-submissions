@@ -10,7 +10,7 @@ public class StringExamples
 		String s4=new String("praveen");
 		
 		System.out.println((s1==s2)+" " +(s1==s3) +" "+(s3==s4)+" "+(s3.equals(s4))+" "+(s1.equals(s2)+" "+(s1.equals(s3))));  
-		                            //true            false                   false 
+		                   //true            false                   false 
                                    //value-value    value-location       location-location
 		
 	}

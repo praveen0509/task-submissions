@@ -19,7 +19,7 @@ public class Interface_Volume_Shape_Finding {
 		System.out.println("Enter Radius");
 		radius= ob.nextFloat();		
 		System.out.println("Sphere volume:-"+sphereObj.volume(radius));
-		System.out.println("Circle volume:-"+circleObj.volume(radius));
+		System.out.println("Circle volume:-"+circleObj.area(radius));
 	}
 	
 }
@@ -39,7 +39,7 @@ class Sphere implements Shape {
 
 //Circle implements Interface
 class Circle implements Shape {
-	public float volume(float r) {
+	public float area(float r) {
 		return PI*r*r;
 		
 	}

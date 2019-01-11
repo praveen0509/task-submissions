@@ -32,6 +32,8 @@ public class Con_loop
    for(i=1;i<a;i++)  
     System.out.println(i);
   
+
+
   //while loop is used execute a block until condition fails
   System.out.println("while loop from 2 to c incremented by 2:");
   i=2;
