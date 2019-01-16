@@ -10,8 +10,6 @@ o/p: {1,4}, {2,3},
 package test;
 import java.util.Scanner;
 
-
-
 public class FindingPairInTheArray {
 	
 	public static void main(String args[]) {
@@ -56,11 +54,12 @@ public class FindingPairInTheArray {
 				for(iter=0; iter<len-1; iter++) {
 					for(pairIter=(short)(iter+1); pairIter<len && arr[iter]!=0; pairIter++) {
 						if((arr[iter]+arr[pairIter])==sum) {
-							if(flag==true) {
+							if(flag==true) {  // Bool condition for Counting OnePair oneTime Only
+								              //if oneTime Calculated, then Don't Calculate Same Pair Again
 							   count++;		
 							   System.out.println("pair: {"+arr[iter]+","+arr[pairIter]+"}");
 							}					   
-							arr[pairIter]=0;
+							arr[pairIter]=0;//Replacing Counted Value place with Zero
 							flag=false;
 						}			
 					}	
