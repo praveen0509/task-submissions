@@ -1,7 +1,8 @@
+/*
+2.Count number of vowels in a String ”Mississippi” and remove the vowels form the string
+*/
 package test;
 import java.util.Scanner;
-
-
 
 public class FIndingVowelsRemoveVowelsFromString {
 	
