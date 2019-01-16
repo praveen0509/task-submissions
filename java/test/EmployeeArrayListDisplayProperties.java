@@ -26,7 +26,7 @@ public class EmployeeArrayListDisplayProperties {
 		Employee emp[]=new Employee[num];
 		
 		//Initializing Objects
-		for(byte iter=0; iter<3; iter++)
+		for(byte iter=0; iter<num; iter++)
 			emp[iter]= new Employee();
 		
 		System.out.println("Enter which Employee Details you want:");
