@@ -1,40 +1,84 @@
 package test;
 import java.util.Scanner;
 
+/*
+ *1.How to find all pairs on integer array whose sum is equal to given number(all should read
+dynamically)
+i/p: array: {5,2,3,4, 1}, value: 4
+o/p: {1,3}
+i/p: array: {5,2,3,4, 1}, value: 5
+o/p: {1,4}, {2,3},
+ */
+
 public class Sample {
-
+	
+     public static void main(String args[]) {
 		
-		public static void main(String args[]) {
-			
-			
-			Scanner ob=new Scanner(System.in);
-			System.out.println("Enter a String:");
-			String str=ob.next();
-			byte iter,count=0;
-			char[] str1=str.toCharArray();
-			//System.out.println(str1.length);
-			
-			byte len=(byte)str1.length;
-			for(iter=0; iter<len; iter++) {
-				if(str1[iter]=='A' || str1[iter]=='E' || str1[iter]=='I' || str1[iter]=='O' || str1[iter]=='U' 
-				|| str1[iter]=='a' || str1[iter]=='e' || str1[iter]=='i' || str1[iter]=='o'|| str1[iter]=='u') {
-					count++;          //Counting Vowels
-					for(byte repIter=iter; repIter<str1.length-1; repIter++)
-						str1[repIter]= str1[repIter+1];
-					iter--;
-					str1[--len]='\0';
+		short len,iter,pairIter,count=0;
+		boolean flag=true;
+		Scanner ob=new Scanner(System.in);
+		System.out.println("Enter Array length:");
+		len=ob.nextShort();
+		short[] arr=new short[len];
+		
+		//Reading numbers into array
+		System.out.println("Enter values into Array:");
+		for(iter=0; iter<len; iter++)
+			arr[iter]=ob.nextShort();
+		
+		System.out.println("Enter sum value:");
+		short sum=ob.nextShort();
+		
+		for(iter=0; iter<len-1; iter++) {
+			for(pairIter=(short)(iter+1); pairIter<len && arr[iter]!=0; pairIter++) {
+				if((arr[iter]+arr[pairIter])==sum) {
+					if(flag==true) {
+					   count++;		
+					   System.out.println("pair: {"+arr[iter]+","+arr[pairIter]+"}");
+					}					   
+					arr[pairIter]=0;
+					flag=false;
 				}			
-			}
-			System.out.println("\nNo.of vowels:"+count);
-			
-			
-			//display()
-			System.out.println("String is:");
-			System.out.println(str1);
-			
-			
-			ob.close();
+			}	
+			flag=true;			
 		}
-
-
+		
+		
+		System.out.println("Count:-"+count);
+	
+	
+	
+	
+	
+    }
+	
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
