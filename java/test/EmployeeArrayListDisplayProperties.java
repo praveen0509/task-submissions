@@ -31,7 +31,7 @@ public class EmployeeArrayListDisplayProperties {
 		
 		System.out.println("Enter which Employee Details you want:");
 		which=ob.nextByte();
-		System.out.println(emp[which-1].toString());
+		System.out.println(emp[which-1]);
 		
 		ob.close();
 	}
@@ -56,8 +56,7 @@ class Employee {
 	}
 	
 	public String toString() {
-		System.out.println("Name:"+name+" EmpId:"+empId+" Salary:"+salary);	
-		return name;		
+		return "Name:"+name+" EmpId:"+empId+" Salary:"+salary;		
 	}	
 	
 }

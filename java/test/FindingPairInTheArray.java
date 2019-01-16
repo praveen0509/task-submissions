@@ -24,13 +24,9 @@ public class FindingPairInTheArray {
 		if(sum>0) {
 			for(iter=0; iter<len; iter++) {
 				  //if number in  the list > given Sum value, then skip that iteration
-				if(arr[iter]>sum) {
-				    arr[iter]=0; 
-				    continue;
-				    }
-				
+				if(arr[iter]>sum)
+				    continue;				
 				for(pairIter=(short)(iter+1); pairIter<len; pairIter++) {
-					
 					if((arr[pairIter]+arr[iter])==sum) {
 						System.out.println("pair: {"+arr[pairIter]+","+arr[iter]+"}");
 						count++;
