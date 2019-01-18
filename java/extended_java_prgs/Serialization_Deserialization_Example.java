@@ -15,7 +15,6 @@ public class Serialization_Deserialization_Example {
 		fo.close();
 		oos.close();
 	   }
-		
 	   catch(IOException e) {
 		   System.out.println("Exception caught:"+e);
 	   }
@@ -38,14 +37,8 @@ public class Serialization_Deserialization_Example {
 		   System.out.println(e);
 	   }
 		
-	
 	}
-
 }
-
-
-
-
 
 class DemoSerialization implements Serializable{
 	int i;

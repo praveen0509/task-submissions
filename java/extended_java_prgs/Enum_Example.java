@@ -10,9 +10,14 @@ public class Enum_Example {
 	}	
 	
 	enum Day {
-		MONDAY,TUESDAY,WEDNESDAY,THURSDAY,FRIDAY,SATURDAY,SUNDAY;		
+		MONDAY(10),TUESDAY,WEDNESDAY,THURSDAY,FRIDAY,SATURDAY,SUNDAY;		
 		public void demoMethod() {
-			System.out.println("From Enum");			
+			System.out.println("From Enum");	
+			
+			private int value;
+			private Day(int i){
+				this.value=i;
+			}
 		}
 		
 	}
