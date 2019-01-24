@@ -1,0 +1,101 @@
+1.Why do we need to handle the exception? And how do we handle the exception? Explain with example 
+2. What is an Exception? Explain about kinds of Exceptions 
+3. Differentate between an Error and Exception
+4. Explain about Exception Hierarchy
+5. Differentate between throw and throws with examples
+6. What are the different types of Exceptions in java? Explain in detail with examples
+7. What is the output of the following programs ? Explain in detailed
+(a) 
+import java.util.Scanner;
+ 
+class Division {
+  public static void main(String[] args) {
+ 
+  int a, b, result;
+       
+  Scanner input = new Scanner(System.in);
+  System.out.println("Input two integers");
+ 
+  a = input.nextInt();
+  b = input.nextInt();
+ 
+  result = a / b;
+       
+  System.out.println("Result = " + result);
+  }
+}
+
+(b)
+
+class Division {
+  public static void main(String[] args) {
+ 
+  int a, b, result;
+ 
+  Scanner input = new Scanner(System.in);
+  System.out.println("Input two integers");
+ 
+  a = input.nextInt();
+  b = input.nextInt();
+ 
+  try {
+    result  = a / b;
+    System.out.println("Result = " + result);
+  }
+ 
+  catch (ArithmeticException e) {
+    System.out.println("Exception caught: Division by zero.");
+  }
+  }
+}
+
+(c)
+
+class Exceptions {
+  public static void main(String[] args) {
+ 
+  String languages[] = { "C", "C++", "Java", "Perl", "Python" };
+       
+  try {
+    for (int c = 1; c <= 5; c++) {
+      System.out.println(languages[c]);
+    }
+  }
+  catch (Exception e) {
+    System.out.println(e);
+  }
+  }
+}
+
+8. What is Serialization and DeSerialization in java? explain with examples
+9.What is Byte stream in java
+10. What is InputStream and What is OutputStram
+11. Mention about the methods used in FileInputStream and FileOutputStream
+12. Write a program for following 
+ a. create a directory 
+ b. In that directory add a file called text.txt
+ c. add content "This is a demo text file" in text.txt
+ d. Read the text.txt file
+13. Program to check if a file or directory physically exist or not.
+14 Consider a file contains a paragraph of data. Write a program to read the file line by line
+15. Mention about the methods in Java.io.File Class in Java
+
+16.Create a class name Bank which contains the properties of account number, account name, user name, password, balance.
+Create a class name  BankTransaction where you create object for bank and add details of bank into the file(add atleast 3 bank objects).
+Create a class BankUser and do following operations 
+ a. Read the bank details of user file.
+ b. Rename the username of the 2nd bank object
+ c. Remove the 3rd bank object from the file
+
+
+
+17. What is garbage collection?
+18. Write a program to perform garbage collection
+19. Explain about the Ways for requesting JVM to run Garbage Collector with example
+
+20. What is Enumeration? Explain with an example
+21. Consider a variable Directions of enum type, which is a collection of four constants EAST, WEST, NORTH and SOUTH.
+Create a class EnumDemo and make use of enum variable. (example if you get the enum value is EAST. you should display "you are at EAST direction") 
+
+22. Explain about Autoboxing and Unboxing with an example 
+23. What are annotations in java? Explain with an example
