@@ -31,7 +31,7 @@ public class BankTransactionthreads {
 		
 		t1.start();
 		t2.start();
-		
+		t1.setPriority(7);
 		System.out.println("Name:"+t1.getName()+"\t priority:"+t1.getPriority());
 		System.out.println("Name:"+t2.getName()+"\t priority:"+t2.getPriority());
 	}
@@ -46,12 +46,12 @@ class BankTransaction {
 	double withdrawMoney() {
 		return money;
 	}
-	
 	void depositeMoney(double deposite) {
 		this.money=deposite;
 	}
 	
 }
+
 
 
 class Depositor extends BankTransaction implements Runnable {
@@ -60,30 +60,26 @@ class Depositor extends BankTransaction implements Runnable {
 		money=money1;
 	}
 	
-	public void run() {
+	synchronized public void run() {
+		 double depmoney;
 		for(int i=1; i<=3; i++) {
-			try {
-			    Thread.sleep(2000);
-			}
-			catch(InterruptedException e) {}
+			System.out.print("Enter Deposite Money:");
+			depmoney=ob.nextDouble();
+			depositeMoney(depmoney);
 			System.out.println("WithDraw:"+withdrawMoney());			
 		}
 	}
-	
 }
+
 
 
 class WithDrawer extends BankTransaction implements Runnable{
 	
 	WithDrawer() {
 	}
-	
 	public void run() {
-         double depmoney;
 		 for(int i=1; i<=3; i++) {
-			System.out.print("Enter Deposite Money:");
-			depmoney=ob.nextDouble();
-			depositeMoney(depmoney);
+			System.out.println("WithDraw:"+withdrawMoney());
 		}
 	}
 }

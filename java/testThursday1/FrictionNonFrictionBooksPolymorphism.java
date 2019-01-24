@@ -46,7 +46,7 @@ public class FrictionNonFrictionBooksPolymorphism {
 		Object a[]=al.toArray();
 		for(int i=0; i<a.length; i++) {
 			System.out.println("Name of the Book:"+((Book) a[i]).getTitle() +
-					"       Price:"+ ((Book) a[i]).price);
+					"       Price:"+ ((Book) a[i]).getPrice());
 		}
 			
 	}

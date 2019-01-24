@@ -78,6 +78,8 @@ public class FileReadingDisplayingDirectoryCreating {
 				flag=false;
 				continue;
 			}
+			
+			
 			String student[]=data.split(" ");
 			if(removeId != Integer.parseInt(student[0])) 
 				saveData= saveData+"\t"+data+"\n";
@@ -92,7 +94,6 @@ public class FileReadingDisplayingDirectoryCreating {
 		bw1.close();
 		br.close();
 		fw.close();
-		
 	}
 
 }
