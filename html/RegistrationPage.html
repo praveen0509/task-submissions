@@ -1,0 +1,148 @@
+<html>
+<head>
+		<title>Registration Form</title>
+		<style  type="text/css">				
+				tbody {color:blue;}
+				body { 
+				    background-image: url(/home/sb-33/Desktop/bird.jpeg);
+				}
+				
+				#mytable {
+					position:absolute;
+					top:40%;
+					left:40%;
+				}
+				
+				#tabDiv {
+					position:absolute;
+					top:40%;
+					left:20%;
+					background-color:#f1f1f1;
+				}
+		</style>
+</head>
+
+<body >
+			<table   id="mytable" align="center"    bgcolor="pink"  >
+					<th><td style="color:Red">Registration Form</td></th>
+					<tbody><tr  >
+						<td>name:</td>
+						<td><input  type="text"  /><td>			
+					</tr>
+					
+					<tr>
+						<td>email:</td>
+						<td><input  type="email"  /><td>			
+					</tr>
+					
+					<tr>
+						<td>DOB:</td>
+						<td><input  type="date"  /><td>			
+					</tr>
+					
+					<tr>
+						<td>password:</td>
+						<td><input  type="password"  /><td>			
+					</tr>
+					</tbody>
+					<td></td>
+					<td  align="center">
+					<input   type="submit"  value="Submit"  /></td>
+			</table>
+		
+		
+			<table id="tabDiv" >
+				<thead  align="center"><tr><td><b>Calculator</b></td></tr></thead>
+				<tr><td><input  type="Number"  id="num1"   placeholder="Enter a Number"></td></tr>
+				<tr><td><input  type="Number"  id="num2"  placeholder="Enter a Number"></td></tr>
+				
+				<tr><td>
+						<input type="button"  onclick="add()" value="add">
+						<input type="button"  onclick="sub()" value="sub">
+						<input type="button"  onclick="mul()" value="mul">
+						<input type="button"  onclick="div()" value="div"></td> </tr>
+				<tr><td>
+				<div id="res1"></div>
+				<div id="res2"></div>
+				<div id="res3"></div>
+				<div id="res4"></div></td></tr>	
+			</table>
+				
+				
+				<script>
+					function add() {
+							var num1=Number(document.getElementById("num1").value);
+							var num2=Number(document.getElementById("num2").value);
+							var num3=num1+num2;
+							
+							var addHere=document.getElementById("res1");
+							addHere.innerHTML="<input  type='button'  id='add' />";
+							document.getElementById("add").value ='add:'+num3;
+					}
+					
+					function sub() {
+					
+							var num1=Number(document.getElementById("num1").value);
+							var num2=Number(document.getElementById("num2").value);
+							var num3=num1-num2;
+							
+							var addHere=document.getElementById("res2");
+							addHere.innerHTML="<input  type='button'  id='sub'/>";
+							document.getElementById('sub').value='sub:'+num3;
+					}
+					
+					
+					function mul() {
+							var num1=Number(document.getElementById("num1").value);
+							var num2=Number(document.getElementById("num2").value);
+							var num3=num1*num2;
+														
+							var addHere=document.getElementById("res3");
+							addHere.innerHTML="<input  type='button'  id='mul'/>";
+							document.getElementById('mul').value='mul:'+num3;
+					}
+					
+					
+					function div() {
+							var num1=Number(document.getElementById("num1").value);
+							var num2=Number(document.getElementById("num2").value);
+							var num3=num1/num2;
+												
+							var addHere=document.getElementById("res4");
+							addHere.innerHTML="<input  type='button'  id='div'/>";
+							document.getElementById('div').value='div:'+num3;
+					}
+				</script>
+		
+		
+		
+		
+		
+		
+		
+		
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

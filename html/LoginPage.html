@@ -1,0 +1,74 @@
+<!--Creating Dynamic Content!!-->
+
+<html>
+<head>
+		<title>Registration Form</title>
+		<style  type="text/css">
+				form {
+						position:absolute;
+						left:40%;
+						top:40%;
+						border: 1px solid black;
+						color:#f1f2f3;
+						
+					}
+					
+				input[type=submit]{
+						align:center;
+						background-color:f1f1f1;}
+				
+		</style>
+</head>
+
+<body   background="/home/sb-33/Desktop/bird.jpeg">
+			
+	<form id="formId"	name="formName"  >
+			
+		<i>Enter first Name:</i>
+		<input  id="fname"  type="text"  placeholder="Enter first name"/></br>
+		
+		<i>Enter last Name:</i>
+		<input  id="lname"  type="text"  placeholder="Enter last name"/></br>
+		
+		<input id="firstname" type="button"	value="firstname" ><br>
+		<input id="lastname" type="button"	value="lastname"><br>
+		
+		<input id="submit" type="button"	value="submit"		onclick="doAction()">
+		<input 	id="reset" 	type="reset"		value="reset"  	onclick="doReset()"></br>
+		
+		
+		<div 	id="divId"></div>
+		
+		<script>
+			function doAction() {
+				var name1=document.forms["formName"]["fname"].value;
+				var name2=document.forms["formName"]["lname"].value;
+				document.forms["formName"]["firstname"].value="FirstName:"+name1;
+				document.forms["formName"]["lastname"].value="LastName:"+name2;
+				document.forms["formName"]["divId"].value="FirstName:"+name1+"\nLastName:"+name2;
+			}
+			
+			function doReset(){
+				document.forms["formName"]["firstname"]=null;
+				document.forms["formName"]["lastname"]=null;			
+			}
+		
+		</script>
+		
+		
+	</form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

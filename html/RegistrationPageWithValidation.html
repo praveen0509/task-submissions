@@ -1,0 +1,64 @@
+<html>
+<head>
+			
+</head>
+
+<body>
+	<h3>Registration Form</h3>
+	<form	onsubmit="return validation(this)"	id="formId">
+	
+		name:<input	type="text"	id="name"><span id="sNameId"	style="color:red;"></span><br>
+		email:<input	type="email"	id="email"><span id="sEmailId"	style="color:red;"></span><br>
+		password:<input	type="password"	id="pwd"><span id="sPwdId"	style="color:red;"></span><br>
+		Confirm password:<input	type="password"	id="cpwd" ><span id="sCpwdId"	style="color:red;"></span><br>
+		dateOfBirth: <input 	type="date"	id="dob"><span id="sDobId"	style="color:red;"></span><br>	
+		<input	type="submit"	value="submit">
+	
+	</form>
+	
+	<script>
+		function validation(form){
+			
+			var name=form.name.value ;
+			var email=form.email.value ;
+			var pwd=form.pwd.value ;
+			var cpwd=form.cpwd.value ;
+			var dob=form.dob.value ;
+			
+			if(name== "") {
+				document.getElementById("sNameId").innerHTML="Enter your Name";
+				form.name.focus();
+				return false;
+			}
+			
+			if(email== "") {
+				document.getElementById("sEmailId").innerHTML="Enter your email";
+				form.name.focus();
+				return false;
+			}
+			
+			if(pwd== "") {
+				document.getElementById("sPwdId").innerHTML="Enter your password";
+				form.name.focus();
+				return false;
+			}
+			
+			if(cpwd== "") {
+				document.getElementById("sCpwdId").innerHTML="Enter your Confirm Password";
+				form.name.focus();
+				return false;
+			}
+			
+			if(dob== "") {
+				document.getElementById("sDobId").innerHTML="Enter your dateOfBirth";
+				form.name.focus();
+				return false;
+			}
+			
+			return true;
+		}
+		
+		
+	</script>
+</body>		
+</html>

@@ -1,0 +1,65 @@
+<html>
+<head>
+<style type="text/css">
+
+  table {
+		position:absolute;
+		top:40%;
+		left:40%;
+		color:red;
+	}
+	
+	body{background-size:cover;}
+	
+</style>
+
+</head>
+
+
+<body   background="/home/sb-33/Desktop/bird1.jpeg"  	size = "cover">
+	<table bgcolor="black" height="30%" width="40px"  >
+		<thead>
+				<th  align="center"><td>Calculator</td></th> </thead>
+		<tbody>
+		       <tr><td color="red">Enter two Numbers.....</td></tr>
+				<tr><td><input id="num1"  type="number"></td>
+				        <td><input  id="num2"  type="number"></td></tr>
+				<tr><td><button   onClick="add()">add</button><button  align="center"  onClick="sub()">sub</button></td>
+						<td><button  onClick="mul()">mul</button><button  align="center"  onClick="div()">div</button></td> </tr>
+						<tr><td><input id="num3"  type="button"></td></tr>
+		</tbody>
+			
+			
+			
+	<script>
+			function add() {
+				var num1=Number(document.getElementById("num1").value);
+				var num2=Number(document.getElementById("num2").value);
+				var num3=num1+num2;
+				document.getElementById("num3").value=num3;
+			}
+			
+			function sub() {
+				var num1=Number(document.getElementById("num1").value);
+				var num2=Number(document.getElementById("num2").value);
+				var num3=num1-num2;
+				document.getElementById("num3").value=num3;
+			}
+			
+			function mul() {
+				var num1=Number(document.getElementById("num1").value);
+				var num2=Number(document.getElementById("num2").value);
+				var num3=num1*num2;
+				document.getElementById("num3").value=num3;
+			}
+			
+			function div() {
+				var num1=Number(document.getElementById("num1").value);
+				var num2=Number(document.getElementById("num2").value);
+				var num3=num1/num2;
+				document.getElementById("num3").value=num3;
+			}
+	</script>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<html>
+<body>
+		
+		name:<input	id="name"	type="text"	><br>
+		email:<input 	id="email"	type="email"><br>
+		<input	id="button"	type="button"	value="click"		onclick="values()">
+		<p	id="result"></p>		
+		<script>
+				
+				var but=document.getElementById("button");
+				but.addEventListener("click", myFunction);
+				
+				function myFunction(){
+					var name=document.getElementById("name").value;
+					var email=document.getElementById("email").value;
+			
+					document.getElementById("result").innerHTML+="Enter details<br>";				
+				}		
+		</script>
+		
+</body>
+<html>
+
+
+
+
+
+
