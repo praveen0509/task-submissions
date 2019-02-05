@@ -1,0 +1,126 @@
+<html>
+<head>
+	<title>My WebPage</title>
+	<style>
+		<script	src="/home/sb-33/Desktop/repository/task-submissions/html/ExternalJS.js"></script>
+		<!--
+		#dHead, #tHead{
+			background-color:lightblue;
+		}
+		
+		#dBody{
+			position:absolute;
+			top:40%;
+			left:40%;
+		}
+		-->
+		footer {
+		  position:absolute;
+		  top:80%;
+		  height: 20%;
+		  color: white;
+		}
+		
+		header,#tHead {
+			  background-color:blue;
+			 <!-- padding: 30px;-->
+			  height: 10%;
+			  font-size: 25px;
+			  color: white;
+		}
+		
+		section{
+			 position:absolute;
+		        top:35%;
+			 height:40%;
+			  padding: 30px;
+			  font-size: 25px;
+			  color:black;
+		}
+	</style>
+</head>
+
+
+<body>
+	
+	<header>
+		<h1>Semantic Bits</h1>
+		<table	id="tHead"	align="right">
+			<tr><td><h3>Home</h3></td>
+			<td><h3>login</h3></td>
+			<td><h3>profile</h3></td><tr></tr>
+		</table>
+	<header>
+
+	<section>
+		
+		<table	id="tableId"><td><h2   >Welcome to SemanticBits</h2></td></table>
+		<div  id="myDiv"></div>
+		<script>
+			setTimeout( myFunction,  2000);	
+			
+			function myFunction(){
+							  var xhttp = new XMLHttpRequest();
+							  xhttp.onreadystatechange = function() {
+							    if (this.readyState == 4 && this.status == 200) {
+							      var text =this.responseText;
+							      var obj=JSON.parse(text);
+							      var table_data="";
+							      
+							      var dataArray=[" "];
+							      document.getElementById("tableId").innerHTML=null;
+							    for(i=0;  i<obj.length;	i++) {
+								//document.getElementById("tableId").innerHTML+= obj[i].id+" "+obj[i].name+" "
+								//+obj[i].username+" "+obj[i].email+" "+obj[i].address+" "+obj[i].phone+" "+obj[i].website+" "+obj[i].company+ "<br>";	
+									table_data+="<tr>";
+									table_data+="<td>"+ obj[i].id + "</td>";
+									table_data+="<td>"+ obj[i].name + "</td>";
+									table_data+="<td>"+ obj[i].email + "</td>";
+									table_data+="<td>"+ obj[i].phone+ "</td>";
+									table_data+="<td>"+ obj[i].website+ "</td>";
+									table_data+= "<td><input	 type='button'  id='${i}'  value='view'	onclick='userDetailsView()'></td>";
+									table_data+="</tr>";			
+									
+									var data=" ";							//Saving EveryData Object
+									data+="<tr>";
+									data+="<td>"+ obj[i].id + "</td>";
+									data+="<td>"+ obj[i].name + "</td>";
+									data+="<td>"+ obj[i].email + "</td>";
+									data+="<td>"+ obj[i].phone+ "</td>";
+									data+="<td>"+ obj[i].website+ "</td>";
+									
+									dataArray.push(data);			//Data sending as a array
+									
+							    }
+							    
+							   
+							      document.getElementById("tableId").innerHTML=table_data;							      
+							    }
+							  }; 
+						xhttp.open("GET", "https://jsonplaceholder.typicode.com/users ", true);
+						xhttp.send(); 	
+			}
+			
+			 function userDetailsView(){
+									document.getElementById("myDiv").innerHTML=data;
+									document.getElementById("myDiv").innerHTML=dataArray[i];
+								}
+			
+		</script>
+	</section>
+	
+	
+	<footer>
+		<table>
+		<tr>
+		<td   style="align:left">@CopyRight</td>
+		<td	    style="align:right">The End</td>
+		</tr>
+		</table>
+	</footer>
+	
+	
+	
+	
+</body>
+</html>
