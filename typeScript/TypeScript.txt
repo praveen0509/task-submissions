@@ -1,0 +1,179 @@
+﻿Variables:
+
+
+1.
+	var name:string = ”mary”
+The variable stores a value of type string
+	2.
+	var name:string;
+The variable is a string variable. The variable’s value is set to undefined by default
+	3.
+	var name = ”mary”
+The variable’s type is inferred from the data type of the value. Here, the variable is of the type string
+	4.
+	var name;
+The variable’s data type is any. Its value is set to undefined by default.
+	
+
+Type Assertion:
+var str = '1' 
+var str2:number = <number> <any> str   //str is now of type number 
+console.log(str2)
+* Global Scope − Global variables are declared outside the programming constructs. These variables can be accessed from anywhere within your code.
+* Class Scope − These variables are also called fields. Fields or class variables are declared within the class but outside the methods. These variables can be accessed using the object of the class. Fields can also be static. Static fields can be accessed using the class name.
+* Local Scope − Local variables, as the name suggests, are declared within the constructs like methods, loops etc. Local variables are accessible only within the construct where they are declared.
+Program:-
+
+
+var id=100;
+var name:string  = "Praveen";
+var address:string="KukatPally";
+console.log(name);
+var str="120";
+var myId=<number><any>str;
+console.log("id:"+id+"\tname:"+name+"\tmyId:"+myId);        
+console.log(typeof(myId));
+
+
+Functions:
+
+
+Defining a Function
+Creating a Function
+Returning Function
+Parameterized Function
+
+
+//Parameterized Function
+//Return Valued Function
+function myFunction(a:number, b:number):number{
+        return a+b;        
+}
+
+
+let sum=myFunction(20, 30);
+console.log(sum);
+
+
+//Optional Function
+function myFunction1(fName:string, lName:string, age?:string):string{
+        if(age==undefined)
+            return fName+" "+lName;
+        else
+            return fName+" "+lName+ " "+age;        
+}
+
+
+console.log(myFunction1("Praveen", "Kumar"));
+console.log(myFunction1("Praveen", "Kumar", "25"));
+
+
+
+
+/*output:
+50
+Praveen Kumar
+Praveen Kumar 25
+*/
+
+
+ *Create a function to check if a given year is a leap year or not that returns string “Leap Year” or “Not a Leap Year”
+
+
+function checkLeapYear(x):string{
+        if(typeof x ==number){
+                if(  (x%400==0) ||(x%100!=0 && x%4==0) )
+                        return "Leap Year";
+                else
+                        return "Not Leap Year";                
+        }        
+        else
+                return "Enter Value is Not a Number";
+}
+console.log(checkLeapYear(1994));
+
+
+
+
+
+
+
+
+ Define an empty string array and then add values and remove values from the array using (push and  pop).
+
+
+var alphas:string[]=[]; 
+
+
+//Pushing One By One
+alphas.push("Praveen");
+alphas.push("Abhi");
+alphas.push("Bharath");
+console.log(alphas);
+//['Praveen', 'Abhi', 'Bharath' ]
+
+
+//pushing Group of Elements at a Time
+alphas.push("sai", "Nagesh", "Sampath");
+console.log(alphas);
+
+
+//[ 'Praveen', 'Abhi', 'Bharath', 'sai', 'Nagesh', 'Sampath' ]
+
+
+
+
+console.log(alphas.pop()); //removes Last element
+console.log(alphas.pop()); //removes Last element
+
+
+
+
+
+
+ Define some arrays and iterate using different loops.
+
+
+var myArray:number[];
+myArray=[10,20,30,40,50,60,70];
+
+
+//For loop
+var sum=0;
+for(var i=0;        i<myArray.length;   i++){
+        sum=sum+myArray[i];
+}
+console.log("sum:"+sum);
+
+
+
+
+//For In loop
+sum=0;
+var j:any;
+for(j in myArray){
+        sum=sum+myArray[j];
+}
+console.log("sum:"+sum);
+
+
+
+
+//For of loop
+sum=0;
+var j:any;
+for(j of myArray){
+        sum=sum+j;
+}
+console.log("sum:"+sum);
+
+
+
+
+//While loop
+sum=0;
+i=0;
+while(i<myArray.length){
+        sum=sum+myArray[i];
+}
+console.log("sum:"+sum);
