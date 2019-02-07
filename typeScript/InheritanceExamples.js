@@ -44,6 +44,7 @@ var ChildFruit2 = /** @class */ (function (_super) {
 var obj1 = new Fruit("Mango", "yellow"); //Mango yellow
 var obj3 = new ChildFruit1("Mango", "yellow"); //apple  red
 var obj2 = new ChildFruit2("Mango", "yellow"); //grape	green
+var obj2 = new ChildFruit2("Mango"); //grape	green
 console.log(obj1.display()); //Last Object Values will be Assigned
 console.log(obj2.display()); //Last Object Values will be Assigned
 console.log(obj3.display()); //Last Object Values will be Assigned
