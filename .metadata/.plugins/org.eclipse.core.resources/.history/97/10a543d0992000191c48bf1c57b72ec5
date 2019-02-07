@@ -1,0 +1,82 @@
+import java.util.*;
+import java.io.*;
+
+public class Sample {
+	public static void main(String args[]) throws Exception {
+		File f=new File("/home/sb-33/Desktop/Praveen");
+		Scanner sc =new Scanner(f);
+		BufferedReader br=new BufferedReader(new FileReader(f));
+		displayData(br);
+		
+		//Traversing In The File
+		System.out.println(traverseRemove(br));
+		sc.close();
+	}
+	
+	
+	public static void displayData(BufferedReader br) throws IOException {
+		String str;
+		while((str=br.readLine())!=null && str!=" ") 
+			System.out.println(str);
+	}
+	
+    public static String traverseRemove(BufferedReader br) throws Exception {
+		String str,strAftRem="";
+		Scanner ob=new Scanner(System.in);
+		System.out.print("Enter a String For \nRemoving of that Line:");
+		String remStr=ob.nextLine();
+		
+	    while((str=br.readLine())!=null) {
+	    	if(str.indexOf(remStr)<0)
+	    		strAftRem += str + "\r\n";	    	
+	    }
+	    ob.close();
+		return strAftRem;
+	}
+}	
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

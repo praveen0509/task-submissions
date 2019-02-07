@@ -1,0 +1,104 @@
+/*
+
+Write a program for following functionalities
+1.Create a class Student having properties id, name and percentage
+2. Creating a Directory named Students in that directory create a file.
+3. Add students data into the file. Add at least 4 students
+4. Read the file and display student data.
+5. Add one more student into the file.
+6. Delete the student data of id 2.
+
+*/
+
+package testThursday1;
+import java.io.*;
+public class FileReadingDisplayingDirectoryCreating {
+	public static void main(String args[]) throws IOException {
+		
+		File f=new File("/home/sb-33/Desktop/Students");
+		if(f.mkdir())
+			System.out.println("Directory Created");
+		else
+			System.out.println("Failed");
+		
+		File sd=new File("/home/sb-33/Desktop/Students/data");
+		sd.createNewFile();
+		
+		FileReader fr=new FileReader(sd);
+		BufferedReader br=new BufferedReader(fr);
+		
+		String s;
+		while((s=br.readLine())!=null) {
+			System.out.println(s);
+		}
+		
+		
+		
+		
+		
+	}
+
+}
+
+
+class Student {
+	
+	int id;
+	String name;
+	double percentage;
+	Student(int id, String name, double percentage) {
+		this.id=id;
+		this.name=name;
+		this.percentage=percentage;		
+	}	
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

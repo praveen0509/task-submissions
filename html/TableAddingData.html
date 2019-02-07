@@ -1,0 +1,82 @@
+<html>
+
+<head><style>
+	#myData input{
+		display:block;
+	}
+	
+	#myData {
+		margin-left:400px;
+		margin-top:5px;
+		margin-bottom:10px;
+	}
+
+</style></head>
+
+<body>
+
+	<table id="myTable" class="display">
+		<tr>
+			<th>first name</th>
+			<th>last name</th>
+		</tr>	
+		<tr><td>praveen</td>
+			<td>kumar</td></tr>
+		<tr><td>pavan</td>
+			<td>kumar</td></tr>
+		<tr><td>abhi</td>
+			<td>kumar</td></tr>
+	</table>
+	
+	<div	id="myData">
+	firstName: <input    type="text"	id="fName"	name="fName">
+	lastName: <input    type="text"	id="lName"	name="lName">
+	
+	<input	type="button"	value="add"   onclick="add()">
+	<input	type="button"	value="display">
+	</div>
+	<script>
+		function add(){
+			var table=document.getElementById("myTable");
+			var newRow=table.insertRow(table.length);
+			var cell1=newRow.insertCell(0);
+			var cell2=newRow.insertCell(1);
+			cell1.innerHTML=document.getElementById("fName").value;
+			cell2.innerHTML=document.getElementById("lName").value;
+		}
+		
+		
+		function display(){
+			var table=document.getElementById("myTable");
+			for(var  i=1;  i<table.rows.length;  i++){
+				table.rows[i].onclick=function(){
+										var rIndex=this.rowIndex;
+										alert("Row is:--"+rIndex);
+									};
+			}		
+		}
+		
+		display();
+	
+	</script>
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

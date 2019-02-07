@@ -1,0 +1,62 @@
+import java.io.*;
+
+
+public class SamplePrograms {
+	
+	public static void main(String args[]) throws Exception{
+		try {
+			myName("praveen");		
+		}
+		catch(MyException m) {
+			System.out.println("Caught:"+m);
+		}	
+	}
+	
+	
+	public static void myName(String name) throws MyException  {
+		if(name.equals("Praveen")) 
+			System.out.println("Its your Name");
+		else 
+			throw new MyException(name);			
+	}
+	
+}
+
+class MyException extends Exception {
+	MyException(String name) {
+		super(name);
+		System.out.println(name+" Its not Your Name");	
+	}	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

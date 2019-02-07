@@ -1,9 +1,9 @@
+/*
 //Parameterized Function
 //Return Valued Function
 function myFunction(a:number, b:number):number{
 	return a+b;	
 }
-
 let sum=myFunction(20, 30);
 console.log(sum);
 

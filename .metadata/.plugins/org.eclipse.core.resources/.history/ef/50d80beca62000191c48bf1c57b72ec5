@@ -1,0 +1,54 @@
+import java.io.*;
+
+
+public class SamplePrograms {
+	
+	public static void main(String args[]) throws Exception{
+		
+		StaticMethod sm=new StaticMethod();
+		System.out.println(sm.name);
+	
+	}	
+}
+
+
+
+class StaticMethod {
+	
+	int i=0;
+	static String name="Praveen";
+	
+	public void method() {
+		name="pavan";
+		System.out.println(name);
+	}
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,55 @@
+import java.util.*;
+
+public class Sample {
+	 int id=100;
+	 String name="praveen";
+}
+
+
+class Sample1 {
+	public static void main(String args[]) {
+		Sample s= new Sample();
+		System.out.println(s.id);
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

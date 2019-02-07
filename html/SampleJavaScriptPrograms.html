@@ -1,0 +1,46 @@
+<html>
+<body>
+<h3>Array Objects</h3>
+<p id="demo"></p>
+
+<b>
+
+
+<script>
+
+/*
+	var txt = "";
+var numbers = [45, 4, 9, 160, 25];
+numbers.forEach(myFunction);
+
+function myFunction(numbers) {
+  txt = txt + numbers+ "<br>"; 
+}
+document.write("values:<br>"+txt);	*/
+
+	/*
+	var d1=new Date();
+	var d=new Date(2019, 11, 22);
+	document.write(d.getHours()+ "<br>");
+	document.write(d.getMinutes()+ "<br>");
+	document.write(d.getTime()+ "<br>");
+	document.write(d.getDate()+ "<br>");
+	document.write(d.getDay()+ "<br>");
+	*/
+	
+	
+	var arr= '{ "name":"John", "birth":"1986-12-14", "city":"New York"}';
+	
+	var obj=JSON.parse(arr);
+	
+	document.write(obj.birth);
+
+	/*
+	var text = '{ "name":"John", "birth":"1986-12-14", "city":"New York"}';
+	var obj = JSON.parse(text);
+	obj.birth = new Date(obj.birth);
+
+	document.getElementById("demo").innerHTML = obj.name + ", " + obj.birth;	*/
+</script>
+</body>
+</html>

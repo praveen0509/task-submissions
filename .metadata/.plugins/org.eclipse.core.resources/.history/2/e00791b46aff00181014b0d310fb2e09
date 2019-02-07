@@ -1,0 +1,14 @@
+package Day6;
+		
+public class OddNumbers 
+{
+  public static void main(String args[])
+  {
+	short i=1;
+	i=(short)(i+1);
+	System.out.println(i);
+  }
+	
+	
+	
+}

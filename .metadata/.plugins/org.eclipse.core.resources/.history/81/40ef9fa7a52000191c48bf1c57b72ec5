@@ -1,0 +1,61 @@
+import java.io.*;
+
+
+public class SamplePrograms {
+	
+	public static void main(String args[]) throws IOException{
+		try {
+		throw new MyException(Integer.toString(10));
+		}
+		
+		catch(MyException m) {
+			System.out.println("Caught:"+m);
+		}
+		
+	}
+	
+}
+
+class MyException extends Exception {
+	
+	MyException(String i) {
+		super(i);
+		System.out.println(i);
+		
+	}
+	
+	
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

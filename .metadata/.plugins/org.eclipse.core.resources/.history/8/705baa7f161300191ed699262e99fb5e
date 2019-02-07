@@ -1,0 +1,28 @@
+package oops;
+
+public class Object_Creating_Child_Parent {
+	public static void main(String args[]) {
+		Student std=new Student();  
+		System.out.println("praveen:"+std);              //oops.Student@1c655221
+		System.out.println(std.toString());   //toString() from Object main class
+		                                      //oops.Student@1c655221
+		
+		
+		
+		
+	}
+}
+
+
+
+class Student  {
+	
+    //	
+	
+	
+	
+	
+	
+}
+
+

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+<h2>The XMLHttpRequest Object</h2>
+<p id="demo"></p>
+
+<input	id="name"	type="text"	 pattern="[a-zA-Z]{5,}"	onblur="myName()"	 required><div id="dname"	style="color:red"></div><br>
+<input	id="email"	type="email"	onblur="myEmail()"><div id="demail"	style="color:red"></div><br>
+<input	id="pwd"	type="password"	onblur="myPassword()"><div id="dpwd"	style="color:red"></div><br>
+<input	id="submit"		type="submit"	value="button">
+
+<script>
+	function myName(){
+		var name=document.getElementById("name").value;
+		
+		document.getElementById("dname").innerHTML=name;
+	}
+	
+	function myEmail(){
+		var email=document.getElementById("email").value;
+		document.getElementById("demail").innerHTML=email;
+	}
+	
+	function myPassword(){
+		var pwd=document.getElementById("pwd").value;
+		document.getElementById("dpwd").innerHTML=pwd;
+	}
+
+</script>
+
+</body>
+</html>

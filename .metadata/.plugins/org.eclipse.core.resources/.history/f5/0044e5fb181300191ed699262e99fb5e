@@ -1,0 +1,46 @@
+package oops;
+
+public class Object_Creating_Child_Parent {
+	public static void main(String args[]) {
+		Object_Creating_Child_Parent std=new Object_Creating_Child_Parent();  
+		System.out.println(std);              
+		//oops.Object_Creating_Child_Parent@3f8f9dd6
+		System.out.println(std.toString());   
+		//toString() from Object main class
+		//oops.Object_Creating_Child_Parent@3f8f9dd6
+		System.out.println(std.hashCode());
+		//1066376662
+		
+		Teacher t=new Student();
+		Student s=new Student();
+		 //t.m1();  
+		  //Parent Reference Variable cannot able to call child class
+		  //if there is no calling method available
+		  //Conclusion: Using Parent reference for creating Object
+		      //cursor goes from SuperClass to subclass
+		s.m1();
+		s.m();
+		  
+		
+		
+		
+	}
+}
+
+
+//Parent class
+class Teacher  {
+	 public void m() {
+		 System.out.println("parent class called");  }	
+}
+
+//Extended Class
+class Student extends Teacher {
+	public void m() {
+		System.out.println("child class called"); }
+	
+	public void m1(){
+		 System.out.println("Child class:"); }
+}
+
+

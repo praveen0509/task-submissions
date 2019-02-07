@@ -1,28 +1,116 @@
 <html>
+<head>
+	<title>My WebPage</title>
+	<style>
+		<script	src="/home/sb-33/Desktop/repository/task-submissions/html/ExternalJS.js"></script>
+		<!--
+		#dHead, #tHead{
+			background-color:lightblue;
+		}
+		
+		#dBody{
+			position:absolute;
+			top:40%;
+			left:40%;
+		}
+		-->
+		footer {
+		  position:absolute;
+		  top:90%;
+		  height: 5%;
+		  color: white;
+		}
+		
+		header, #tHead {
+			  background-color:blue;
+			  height: 10%;
+			  font-size: 25px;
+			  color: white;
+		}
+		
+		section{
+			 position:absolute;
+		        top:35%;
+			 height:40%;
+			  padding: 30px;
+			  font-size: 25px;
+			  color:black;
+		}
+	</style>
+</head>
+
+
 <body>
-		
-		name:<input	id="name"	type="text"	><br>
-		email:<input 	id="email"	type="email"><br>
-		<input	id="button"	type="button"	value="click"		onclick="values()">
-		<p	id="result"></p>		
+	
+	<header>
+		<h1>Semantic Bits</h1>
+		<div    style="background-color:lightBlue">
+		<table	id="tHead"	align="right">
+			<tr><td><h3>Home</h3></td>
+			<td><h3>login</h3></td>
+			<td><h3>profile</h3></td><tr></tr>
+		</table>
+		<div>
+	</header>
+
+	<section>
+		<table	id="tableId"	style="text-align:center"><td><h2>Welcome to SemanticBits</h2></td></table>
+		<div  id="myDiv"></div>
 		<script>
-				
-				var but=document.getElementById("button");
-				but.addEventListener("click", myFunction);
-				
-				function myFunction(){
-					var name=document.getElementById("name").value;
-					var email=document.getElementById("email").value;
+			setTimeout( myFunction,  2000);	
 			
-					document.getElementById("result").innerHTML+="Enter details<br>";				
-				}		
+			function myFunction(){
+							  var xhttp = new XMLHttpRequest();
+							  xhttp.onreadystatechange = function() {
+										    if (this.readyState == 4 && this.status == 200) {
+												      var obj=JSON.parse(this.responseText);
+												      
+												      var table_data = "<table border='1'	 id='myTable' >";
+												    for(i=0;  i<obj.length;	i++) {
+														table_data+="<tr	  id='rowId'>";
+														table_data+="<td>"+ obj[i].id + "</td>";
+														table_data+="<td>"+ obj[i].name + "</td>";
+														table_data+="<td>"+ obj[i].email + "</td>";
+														table_data+="<td>"+ obj[i].phone+ "</td>";
+														table_data+="<td>"+ obj[i].website+ "</td>";
+														
+														table_data+= "<td><input	 type='button' value='view'></td>";
+														table_data+="</tr>";												
+												    }
+												    table_data+="</table>";
+												      document.getElementById("tableId").innerHTML=table_data;							      
+											 }
+									}; 
+						xhttp.open("GET", "https://jsonplaceholder.typicode.com/users ", true);
+						xhttp.send(); 	
+			}
+			
+			function userDetailsView(){
+				var table=document.getElementById("myTable");
+				for(var  i=1;  i<table.rows.length;  i++){
+					table.rows[i].onclick=function(){
+											var rIndex=this.rowIndex;
+											alert("Row is:--"+rIndex);
+										};
+					}		
+			}
+			
+		      userDetailsView();
 		</script>
-		
+	</section>
+	
+	
+	<footer>
+		<table>
+		<tr>
+		<td   style="align:left">@CopyRight</td>
+		<td	    style="align:right">The End</td>
+		</tr>
+		</table>
+	</footer>
+	
+	
+	
+	
 </body>
-<html>
-
-
-
-
-
-
+</html>

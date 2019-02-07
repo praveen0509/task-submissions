@@ -1,0 +1,51 @@
+/*
+ *  Given a sorted array and a target value, return the index if the target is found. 
+ *  If not, return the index where it would be if it were inserted in order.
+ */
+
+
+
+package day7;
+import java.util.*;
+
+public class TargetValue_position {
+	public static void main(String args[]) {
+		
+		short num,iter,target;
+		boolean flag=false;
+		Scanner ob=new Scanner(System.in);
+		System.out.print("Enter How many Values to be in Array:");
+	    num=ob.nextShort();
+	
+		short sortedArray[]=new short[num];
+		System.out.println("Enter Array values in Sorted Order");
+		for(iter=0; iter<num; iter++) {
+			sortedArray[iter]=ob.nextShort();
+		}
+		
+		System.out.print("Enter Target value for Searching:");
+		target=ob.nextShort();
+		
+		for(iter=0; iter<num; iter++) {
+			if(target==sortedArray[iter]) {
+				System.out.println("Target found at index:"+target);
+				flag=true;
+			}		
+		}
+		
+		if(flag==false) {
+			
+			
+		}
+		
+		
+		
+		
+		
+		
+		
+		
+	}	
+	
+	
+}

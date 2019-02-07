@@ -1,0 +1,18 @@
+package Day6;
+
+import java.util.Scanner;
+		
+public class OddNumbers 
+{
+  public static void main(String args[])
+  {
+	short n;
+	Scanner ob=new Scanner(System.in);
+	n=ob.nextShort();
+	for(short i=1;i<n;i+=2)
+	   System.out.println(i);
+  }
+	
+	
+	
+}

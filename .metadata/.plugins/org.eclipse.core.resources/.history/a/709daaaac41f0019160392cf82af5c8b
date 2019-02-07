@@ -1,0 +1,137 @@
+/*
+
+Write a program for following functionalities
+1.Create a class Student having properties id, name and percentage
+2. Creating a Directory named Students in that directory create a file.
+3. Add students data into the file. Add at least 4 students
+4. Read the file and display student data.
+5. Add one more student into the file.
+6. Delete the student data of id 2.
+
+*/
+
+package testThursday1;
+import java.io.*;
+import java.util.*;
+
+public class FileReadingDisplayingDirectoryCreating {
+	public static void main(String args[]) throws IOException {
+		
+		File f=new File("/home/sb-33/Desktop/Students");
+		Scanner ob=new Scanner(System.in);
+		//f.mkdirs() creates directory + path
+		if(f.mkdir())
+			System.out.println("Directory Created");
+		else
+			System.out.println("Failed");
+		
+		File sd=new File("/home/sb-33/Desktop/Students/data");
+		sd.createNewFile();
+		
+		
+		/*
+		System.out.println("Enter How Many Students Data You Wants to Add:");
+		int num=ob.nextInt();
+		Student s[]=new Student[num];
+		
+		for(int i=0; i<num; i++) {
+			System.out.println("Enter Student Id, name, percentage:");
+			s[i]=new Student(ob.nextInt(), ob.next(), ob.nextDouble());			
+		}
+		
+		FileWriter fw=new FileWriter(sd, true);
+		
+		fw.write(s);  
+		*/
+		
+		
+		
+		FileReader fr=new FileReader(sd);
+		BufferedReader br=new BufferedReader(fr);
+		
+		String s;
+		while((s=br.readLine())!=null)
+			System.out.println(s);
+		
+		FileWriter fw=new FileWriter(sd, true);  //Apend Mode
+		System.out.println("Enter Id, name, Percentage of a student with Tab space:");
+		String str=ob.nextLine();
+		fw.write(str);
+		System.out.println("Data Added");
+		
+		BufferedReader br1=new BufferedReader(fr);
+		String line=br1.readLine();
+		System.out.println(line);
+		
+		
+		
+		
+		
+		br.close();
+		fw.close();
+		fr.close();
+	}
+
+}
+
+
+class Student {
+	int id;
+	String name;
+	double percentage;
+	Student(int id, String name, double percentage) {
+		this.id=id;
+		this.name=name;
+		this.percentage=percentage;		
+	}	
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

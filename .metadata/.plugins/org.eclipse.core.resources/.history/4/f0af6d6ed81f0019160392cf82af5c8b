@@ -1,0 +1,82 @@
+package testThursday1;
+import java.util.*;
+
+public class StudentClassSort {
+	
+	public static void main(String args[]) {
+		
+		Student s1=new Student(101, 95, "praveen");
+		Student s2=new Student(102, 92, "bharath");
+		Student s3=new Student(103, 75, "abhi");
+		Student s4=new Student(104, 85, "sai");
+		
+		ArrayList<Student> al=new ArrayList<Student>();
+		al.add(s1);
+		al.add(s2);
+		al.add(s3);
+		al.add(s4);
+		
+		Collections.sort(al);
+		
+		for(Student s:al) {
+			System.out.println("id:"+s.id+" name:"+s.name+" marks:"+s.marks);			
+		}
+		
+		
+	}
+
+}
+
+
+
+
+
+ class Student implements Comparable<Student> {
+	
+	int id;
+	int marks;
+	String name;
+	
+	Student(int id, int marks, String name) {
+		this.id=id;
+		this.marks=marks;
+		this.name=name;
+	}
+	
+	public int compareTo(Student obj) {
+		return this.id-obj.id;	
+	}
+	
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

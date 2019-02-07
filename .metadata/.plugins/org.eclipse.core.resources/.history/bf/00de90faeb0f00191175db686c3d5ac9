@@ -1,0 +1,45 @@
+//Find out the missing number in the array of length n-1 and integers in the range of 1 to n
+
+
+package day7;
+import java.util.Scanner;
+
+public class MissingNumber {
+	
+	public static void main(String args[]) {
+		short num, iter, missingNum=1;
+		boolean flag=false;
+		Scanner ob=new Scanner(System.in);
+		System.out.print("Enter a Number:");
+		num=ob.nextShort();
+        short store[]=new short[num-1];		
+		
+        System.out.println("Enter array Values:");
+		for(iter=0; iter<num-1; iter++)
+			store[iter]=ob.nextShort();
+		
+		//Finding missing Number
+		for(missingNum=1; missingNum<=num; missingNum++) {
+		   for(iter=0 ;iter<num-1; iter++) {
+			    if(missingNum==store[iter]) {
+				    missingNum++;
+				    flag=true;
+			    }			
+		   }
+		   
+		   if(flag==false)
+			   System.out.println("Missing Number is:-"+missingNum);	
+				
+		}
+		
+		
+		
+		
+	}
+	
+	
+	
+	
+	
+
+}

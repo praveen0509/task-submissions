@@ -1,0 +1,33 @@
+package oops;
+
+public class Object_Creating_Child_Parent {
+	public static void main(String args[]) {
+		Object_Creating_Child_Parent std=new Object_Creating_Child_Parent();  
+		System.out.println(std);              
+		//oops.Student@1c655221
+		System.out.println(std.toString());   
+		//toString() from Object main class
+		//oops.Student@1c655221
+		
+		
+		
+		
+	}
+}
+
+
+
+class Teacher  {
+	 public void m1() {
+		 System.out.println("parent class called");
+	 }	
+}
+
+class Student extends Teacher {
+	public void m() {
+		System.out.println("child class called");		
+	}
+	
+}
+
+

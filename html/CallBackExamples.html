@@ -1,0 +1,148 @@
+<html>
+</body>
+
+
+<!--
+<script>
+var allUserData = [];
+
+// generic logStuff function that prints to console
+function logStuff (userData) {
+    if ( typeof userData === "string")
+    {
+        console.log(userData);
+    }
+    else if ( typeof userData === "object")
+    {
+        for (var item in userData) {
+            console.log(item + ": " + userData[item]);
+        }
+
+    }
+
+}
+
+
+function getInput (options, callback) {
+    allUserData.push (options);
+    callback (options);
+
+}
+
+getInput ({name:"Rich", speciality:"JavaScript"}, logStuff);
+</script>
+
+-->
+
+
+
+<script>
+	/*
+	function add(a, b, callback){	
+		document.write(`sum of ${a} and ${b} is ${a+b} `);
+		callback(c,d);	
+	}
+	function sum1(c,d) {
+		document.write(`sum of ${c} and ${d} is ${c+d}`);
+	}
+	add(2,3, sum1(4,6));
+	//output:---- sum of 4 and 6 is 10sum of 2 and 3 is 5
+	*/
+	
+	/*
+	clientData("praveen", "kumar", fullDetails);
+	
+	function clientData(fName, lName, callback){
+		var fullName;
+		var allDetails=function(fName, lName){
+			this.fullName=fName+" "+lName;		
+			document.write(fullDetails);
+		}
+				
+		document.write("clientData Function<br>");
+		callback(fName, lName);	
+	}
+	
+	
+	
+	function fullDetails(fName, lName){
+		fullName=fName+" "+lName;
+		document.write(fullName+"<br>");	
+		
+		clientData.fullName;
+	}
+	*/
+	
+	/*
+	function add(){
+		var x=0;
+		 var val=function myFunction(){x=x+1; return x;};
+		return val;
+	}
+	
+	var xval=add();
+	alert(xval());
+	alert(xval());
+	alert(xval());
+	
+	*/
+	
+	/*
+	function myFood(item1,	item2, callback){
+		alert("My food is....."+`${item1} and ${item2}`);
+		callback;
+	}
+	
+	function myFood1(puff){
+		alert("Eating "+ `${puff}`);
+		}
+	
+	myFood("pizza",	"burger",  myFood1("Puffs"));	
+	*/
+	
+	
+	/*
+	function myFood(item1, item2, callback){
+		callback(item1,item2);	
+	}
+	
+	function myMenu(a, b){
+		alert(`menu is ${a} and ${b}`);
+	}
+	
+	myFood("pizza",	"burger", myMenu);	
+	*/
+	
+	var details={
+		id:101,
+		fullName:" ",
+		name:function (fName, lName){
+				fullName=fName+" "+lName;			
+			}
+	};
+	
+	function userDetails(fName, lName, callback){
+		callback(fName, lName);	
+	}
+	
+	userDetails("praveen", "kumar", details.name);
+	console.log(details.fullName);
+	
+</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
