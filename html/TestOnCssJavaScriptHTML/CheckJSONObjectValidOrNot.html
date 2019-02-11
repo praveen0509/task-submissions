@@ -1,0 +1,71 @@
+<html>
+
+<body>
+	<h2>JSON object Checking</h2>
+	Enter a pattern For Checking<br>
+	<input 	type="text"	id="myId">
+	<input 	type="button"	value="check"	id="mybtn"	onclick="myFunction()">
+	<div	id="result"></div>
+	
+	
+	<script>
+		function myFunction(){
+			var myText=document.getElementById("myId").value;
+			//document.getElementById("result").innerHTML=myText;
+			
+			for(var i=2;	i<myText.length/2;	i++){			
+				//Every input and Last position validation cheching
+				if( positionCheck(0, myText.length-1,	myText)) 
+					return false;
+				
+				else if( myText.charAt(i)=='[' ) {
+						if( myText.charAt(myText.length-i)!=']') {
+							document.getElementById("result").innerHTML="Its Not A JSON Object Format";
+							return false;
+						}
+						if(positionCheck(i+1, myText.length-i-1, myText))
+							return false;
+				}
+				
+				
+				else if(myText.charAt(i)=='{' )  {
+						if( myText.charAt(myText.length-i)!='}') {
+							document.getElementById("result").innerHTML="Its Not A JSON Object Format";
+							return false;
+						}
+						if(positionCheck(i+1, myText.length-i-1, myText))
+							return false;
+				}
+					
+				document.getElementById("result").innerHTML="JSON Object";								
+			}
+		}
+		
+		
+		function positionCheck(first, last, myText){
+			if( (myText.charAt(first)!='{')	||   (myText.charAt(last)!='}')  || (myText.charAt(first+1)!=':')  ){
+					document.getElementById("result").innerHTML="Its Not A JSON Object Format";
+					return true;
+			}
+			else
+				return false;		
+		}
+		
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

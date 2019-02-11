@@ -1,0 +1,63 @@
+<html>
+
+<body>
+	<h2>JSON object Checking</h2>
+	Enter a pattern For Checking<br>
+	<input 	type="text"	id="myId">
+	<input 	type="button"	value="check"	id="mybtn"	onclick="myFunction()">
+	<div	id="result"></div>
+	
+	
+	<script>
+		function myFunction(){
+			var myText=document.getElementById("myId").value;
+			//document.getElementById("result").innerHTML=myText;
+			
+			if( (myText.charAt(0)!='{')	||   (myText.charAt(myText.length-1)!='}')  || (myText.charAt(1)!=':')  ){
+						document.getElementById("result").innerHTML="Its Not A JSON Object Format";
+						return true;
+			}
+			
+		       var flag=false;
+		       for(let i=2;   i<myText.length/2;   i++){									
+				if( ( (myText.charAt(i) =='[') && (myText.charAt(myText.length-i) ==']') ) ||  ( (myText.charAt(i+1) =='{') && (myText.charAt(myText.length-i-1) =='}') )  )  {
+					flag=true;
+				}
+				
+				else if( (myText.charAt(i) =='{') && (myText.charAt(myText.length-i) =='}')  && ( (myText.charAt(i+1) ==':') || (myText.charAt(myText.length-i-1) =='[') )  )
+					flag=true;	
+				
+		       }
+			if(flag==true){
+					document.getElementById("result").innerHTML="JSON Object";
+						return true;
+				}	
+			document.getElementById("result").innerHTML="Not a JSON Object";
+		}
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
