@@ -1,0 +1,25 @@
+
+<table  border="1px solid black"  align="center">
+  <tr>
+    <th>ID</th>
+    <th>NAME</th>
+    <th>AREA</th>
+  </tr>
+
+  <tr *ngFor="let person of myPersonData" (click)="displayPersonData(person)">
+    <td>{{person.id}}</td>
+    <td>{{person.name}}</td>
+    <td>{{person.area}}</td>
+  </tr>
+
+</table>
+
+
+<h2 align="center">Result</h2>
+<div  align="center">{{person.id}} {{person.name}}  {{person.area}}</div>
+
+
+
+
+
+
