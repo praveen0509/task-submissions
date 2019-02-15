@@ -1,0 +1,20 @@
+
+<table  border="1px solid black"  align="center">
+  <tr>
+    <th>ID</th>
+    <th>NAME</th>
+    <th>AREA</th>
+  </tr>
+
+  <tr *ngFor="let person of myHero" (click)="displayHeroData(person)">
+    <td>{{person.id}}</td>
+    <td>{{person.name}}</td>
+    <td>{{person.area}}</td>
+  </tr>
+</table>
+<div *ngIf="person">
+<app-child  [parentData]="person"  (sendData)="removeDataInParent($event)" ></app-child>
+</div>
+
+
+
