@@ -1,0 +1,28 @@
+
+<div  align="center" >
+  <form class="form-group"  [formGroup]="loginForm"  style="background-color: aqua;">
+    <h3 align="center">Form</h3>
+    <table>
+      <tr><td> Name: </td><td>
+                      <input formControlName="name" class="form-control" type="text" pattern="[A-Za-z]"  placeholder="Enter your Name" required></td></tr>
+                <tr><td> <div *ngIf="name.errors.required"> Name is required. </div>
+                  <div *ngIf="name.errors.minlength"> Name must be at least 4 characters long. </div></td></tr>
+      <tr><td> Father Name:  </td><td>
+                      <input class="form-control" formControlName="fatherName" type="text" pattern="[A-Za-z]"  placeholder="Enter Father Name" required></td></tr>
+      <tr><td> Sex : </td><td><input name="sex" type="radio" value="male">male
+                              <input name="sex" type="radio" value="female">female</td></tr>
+      <tr><td> Email:  </td><td>
+                      <input class="form-control" formControlName="email"  type="email"   placeholder="Enter EmailID"  required></td></tr>
+      <tr><td> Address:  </td><td>
+                      <input class="form-control" formControlName="address" type="text"  placeholder="Enter Address" required></td></tr>
+      <tr><td></td></tr>
+
+      <tr><td align="center"><input  [disabled]="loginForm.invalid" type="submit" value="submit" routerLink="/homePage"></td><td align="center"><input type="reset"  value="reset"></td></tr>
+    </table>
+  </form>
+</div>
+
+
+
+
+
