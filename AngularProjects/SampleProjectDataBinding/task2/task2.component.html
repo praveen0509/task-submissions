@@ -1,0 +1,40 @@
+<div>
+  <h1 align="center">JSON data</h1>
+
+  <table  border="1px solid black"  align="center">
+    <tr>
+      <th>id</th>
+      <th>name</th>
+      <th>area</th>
+    </tr>
+    <tr *ngFor="let hero of myHero" (click)="onSelect(hero)">
+      <td >{{hero.id}}</td>
+      <td >{{hero.name}}</td>
+      <td >{{hero.area}}</td>
+    </tr>
+  </table>
+</div><br>
+
+
+<div  align="center"  *ngIf="hero">
+
+
+  <app-user-details (childData)="removeData($event)" [hero]= "hero" [parentName]="hero.name" [parentArea]="hero.area" [parentId]="hero.id" >
+  </app-user-details>
+
+  <!---->
+  <!--<input type="button" [value]='hero.id' >-->
+  <!--<input type="button" [value]='hero.name' >-->
+  <!--<input type="button" [value]='hero.area' >-->
+</div>
+
+
+
+
+
+
+
+
+
+
+

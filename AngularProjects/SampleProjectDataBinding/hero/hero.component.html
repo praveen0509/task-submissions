@@ -1,0 +1,16 @@
+<div>
+  <ul>
+    <li *ngFor="let hero of heroes" (click)="selectedRow(hero)"> {{hero.id}} --> {{hero.name}} </li>
+  </ul>
+
+
+  <app-hero-details  (childValue) =  "parentMethod($event)" >
+    <h1> {{myEvent1}} </h1>
+
+  </app-hero-details>
+
+  <div>
+    {{hero.id}} {{hero.name}}
+  </div>
+
+</div>

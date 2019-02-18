@@ -1,0 +1,14 @@
+
+<div  *ngFor="let hero of heroes" (click)="selectedValue(hero)" > {{hero.id}} -- {{hero.name}}</div>
+
+<div  *ngIf="myHero">
+  <input type="button" [(ngModel)]="myHero.name" >
+  <input type="button" [(ngModel)]="myHero.id" >
+</div>
+
+
+
+
+
+
+
