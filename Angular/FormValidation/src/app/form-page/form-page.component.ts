@@ -16,13 +16,15 @@ export class FormPageComponent implements OnInit {
   constructor(private fb: FormBuilder, private router: Router) {
     this.createForm();
   }
+
   createForm() {
     this.angForm = this.fb.group({
       name: ['', Validators.required, Validators.minLength(4)],
       fatherName: ['', Validators.required, Validators.minLength(4)],
       email: ['', Validators.required, Validators.email],
       password: ['', Validators.required, Validators.minLength(4)],
-      address: ['', Validators.required ]
+      address: ['', Validators.required ],
+      dropdown: ['', Validators.required]
     });
   }
 
