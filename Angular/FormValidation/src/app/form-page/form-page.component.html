@@ -1,28 +1,89 @@
+<!-- app.component.html -->
 
-<div  align="center" >
-  <form class="form-group"  [formGroup]="loginForm"  style="background-color: aqua;">
-    <h3 align="center">Form</h3>
-    <table>
-      <tr><td> Name: </td><td>
-                      <input formControlName="name" class="form-control" type="text" pattern="[A-Za-z]"  placeholder="Enter your Name" required></td></tr>
-                <tr><td> <div *ngIf="name.errors.required"> Name is required. </div>
-                  <div *ngIf="name.errors.minlength"> Name must be at least 4 characters long. </div></td></tr>
-      <tr><td> Father Name:  </td><td>
-                      <input class="form-control" formControlName="fatherName" type="text" pattern="[A-Za-z]"  placeholder="Enter Father Name" required></td></tr>
-      <tr><td> Sex : </td><td><input name="sex" type="radio" value="male">male
-                              <input name="sex" type="radio" value="female">female</td></tr>
-      <tr><td> Email:  </td><td>
-                      <input class="form-control" formControlName="email"  type="email"   placeholder="Enter EmailID"  required></td></tr>
-      <tr><td> Address:  </td><td>
-                      <input class="form-control" formControlName="address" type="text"  placeholder="Enter Address" required></td></tr>
-      <tr><td></td></tr>
+<div class="container">
+  <form [formGroup]="angForm" novalidate>
+        <div class="form-group">
+          <label>Name:</label>
+          <input class="form-control" formControlName="name" type="text"  pattern="[a-zA-Z\s]+">
+        </div>
+        <div *ngIf="angForm.controls['name'].invalid && (angForm.controls['name'].dirty || angForm.controls['name'].touched)"
+             style="color: red"   class="alert alert-danger">
+          <div *ngIf="angForm.controls['name'].errors.required">
+            Name is required.
+          </div>
+          <div *ngIf="angForm.controls['name'].errors.minlength">
+            Name must be at least 4 characters long.
+          </div>
+          <div *ngIf="angForm.controls['name'].errors.pattern && angForm.controls['name'].touched"  style="color: red">
+            name is not Valid
+          </div>
+        </div>
 
-      <tr><td align="center"><input  [disabled]="loginForm.invalid" type="submit" value="submit" routerLink="/homePage"></td><td align="center"><input type="reset"  value="reset"></td></tr>
-    </table>
+        <div class="form-group">
+          <label>Father Name:</label>
+          <input class="form-control" formControlName="fatherName" type="text"  pattern="[a-zA-Z\s]+">
+        </div>
+        <div *ngIf="angForm.controls['fatherName'].invalid && (angForm.controls['fatherName'].dirty || angForm.controls['fatherName'].touched)"
+             style="color: red"  class="alert alert-danger">
+          <div *ngIf="angForm.controls['fatherName'].errors.required">
+            Father Name is required.
+          </div>
+          <div *ngIf="angForm.controls['fatherName'].errors.minlength">
+            Father Name must be at least 4 characters long.
+          </div>
+          <div *ngIf="angForm.controls['fatherName'].errors.pattern && angForm.controls['fatherName'].touched" >
+              Father name not Valid
+          </div>
+        </div>
+
+
+        <div class="form-group">
+          <label>Email:</label>
+          <input class="form-control" formControlName="email" type="email"  pattern="^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,6})+$">
+        </div>
+        <div *ngIf="angForm.controls['email'].invalid && (angForm.controls['email'].dirty || angForm.controls['email'].touched)"
+             style="color: red" class="alert alert-danger">
+          <div *ngIf="angForm.controls['email'].errors.required">Email is required.</div>
+          <div *ngIf="(angForm.controls['email'].errors.email || angForm.controls['email'].errors.pattern) && angForm.controls['email'].touched">
+            Email is not Valid
+          </div>
+
+        </div>
+
+        <div class="form-group">
+          <label>Password:</label>
+          <input class="form-control" formControlName="password" type="password">
+        </div>
+        <div *ngIf="angForm.controls['password'].invalid && (angForm.controls['password'].dirty || angForm.controls['password'].touched)"
+             style="color: red" class="alert alert-danger">
+          <div *ngIf="angForm.controls['password'].errors.required">Password is required.</div>
+          <div *ngIf="angForm.controls['password'].errors.minlength && angForm.controls['password'].touched">
+            Password must be at least 4 characters long.
+          </div>
+
+        </div>
+
+
+    <div class="form-group">
+          <label>Address:</label>
+          <input class="form-control" formControlName="address" type="text" pattern="^[#.0-9a-zA-Z\s,-]+$">
+        </div>
+        <div *ngIf="angForm.controls['address'].invalid && (angForm.controls['address'].dirty || angForm.controls['address'].touched)"
+             style="color: red" class="alert alert-danger">
+          <div *ngIf="angForm.controls['address'].errors.required">
+            Address is required.
+          </div>
+          <div *ngIf="angForm.controls['address'].errors.pattern && angForm.controls['address'].touched" >
+            Father name not Valid
+          </div>
+        </div>
+
+        <button type="submit" [disabled]="angForm.pristine || angForm.invalid || angForm.errors" class="btn btn-success"
+                (click)="onselect()" >
+          Save
+        </button>
+        <button type="reset">reset</button>
   </form>
+  <br />
+
 </div>
-
-
-
-
-
