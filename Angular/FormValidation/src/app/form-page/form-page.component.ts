@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {FormGroup, FormBuilder, Validators} from '@angular/forms';
 import {Router} from '@angular/router';
+import {LocalStorage} from '@ngx-pwa/local-storage';
 @Component({
   selector: 'app-form-page',
   templateUrl: './form-page.component.html',
@@ -12,7 +13,7 @@ export class FormPageComponent implements OnInit {
   localStorageItem: any;
   title = 'Angular Form Validation Tutorial';
   angForm: FormGroup;
-  constructor(private fb: FormBuilder, private router: Router) {
+  constructor(private fb: FormBuilder, private router: Router, private localStorage: LocalStorage) {
     this.createForm();
   }
 
@@ -44,15 +45,20 @@ export class FormPageComponent implements OnInit {
 
 
 
-  onselect(): void {
-       this.data = JSON.stringify(this.angForm.value);
-       alert(this.data);
-       this.router.navigate(['homePage']);
-       this.localStorageItem = JSON.parse(localStorage.getItem('this.data'));
+    onselect(): void {
 
-  }
-  ngOnInit(): void { }
+       // this.localStorageItem = JSON.parse(localStorage.getItem('this.data'));
 
+       // if Registration Form is Invalio
+        if (this.angForm.invalid) {
+          return;
+        }
 
+      alert( JSON.stringify(this.angForm.value));
+      this.localStorage.setItem('user', this.angForm.value).subscribe(() => {});
+      this.router.navigate(['homePage']);
+
+   }
+   ngOnInit(): void { }
 
 }
