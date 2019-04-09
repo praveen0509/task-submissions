@@ -33,6 +33,29 @@ export default class employeesController {
 
   }
 
+
+  static deleteMember(req,res)
+  {
+    let _req = req.params.id;
+    employeesDao.deleteMember(_req).then((deletestudent) => {
+      res.status(200).json(deletestudent).send(deletestudent);
+    })
+      .catch(error => res.json(error))
+  }
+
+
+  static updateEmployee(req,res)
+  {
+    let id = req.params.id;
+    let _req = req.body;
+    employeesDao.updateStudent(_req,id).then((us) => {
+      res.status(200).json(us).send(us);
+    })
+      .catch(error => {res.status(400).json(error)})
+  }
+
+
+
 }
 
 

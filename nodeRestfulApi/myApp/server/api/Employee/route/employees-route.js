@@ -9,7 +9,11 @@ export default class employeesRoute {
     // router.get('/departments', departmentsController.getAll);
     router.route('/employees/:id').get(employeesController.getById);
 
-    router.route('/employees/:add').get(employeesController.add);
+    router.route('/employees/:add').post(employeesController.add);
+
+    router.route('/employees/delete/:id').delete(employeesController.deleteMember)
+    router.route('/employees/update/:id').put(employeesController.updateEmployee)
+  }
   }
 }
 

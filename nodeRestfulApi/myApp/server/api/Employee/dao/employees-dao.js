@@ -43,6 +43,44 @@ export default class employeesDao {
     });
   }
 
+  static deleteMember(id){
+    return new Promise((resolve,reject) => {
+
+      models.Employee.destroy({
+        where:
+          {
+            id: id
+          }
+      }).then(delemp => {
+          console.log(delemp);
+          resolve(delemp);
+        },
+        (error) => {
+          reject(error);
+        });
+    });
+  }
+  static updateStudent(req,id){
+    return new Promise((resolve,reject) => {
+      models.Employee.update(
+        {
+          empName: req.empName
+        },
+        {
+          where:
+            {
+              id: id
+            }
+        })
+        .then(updateEmp => {
+          // console.log(updttudents)
+          resolve(updateEmp);
+        }, (error) => {
+          reject(error);
+        });
+    });
+  }
+
 
 
 }
