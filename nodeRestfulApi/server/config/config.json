@@ -1,0 +1,41 @@
+{
+  "development": {
+    "username": "ccxp",
+    "password": "ccxp",
+    "database": "ccxp",
+    "host": "127.0.0.1",
+    "port": "5432",
+    "dialect": "postgres",
+    "schema_search_path": "public,topology",
+    "postgis_extension": "postgis,postgis_topology"
+  },
+  "test": {
+    "username": "ccxp_test",
+    "password": "ccxp_test",
+    "database": "ccxp_test",
+    "host": "127.0.0.1",
+    "port": "5432",
+    "dialect": "postgres",
+    "schema_search_path": "public,topology",
+    "postgis_extension": "postgis,postgis_topology"
+  },
+  "production": {
+    "username": "ccxp",
+    "password": "ccxp",
+    "database": "ccxp",
+    "host": "127.0.0.1",
+    "port": "5432",
+    "dialect": "postgres",
+    "schema_search_path": "public,topology",
+    "postgis_extension": "postgis,postgis_topology"
+  },
+  "aws-qa": {
+    "username": "ccxp",
+    "password": "ccXP:)123",
+    "database": "ccxp",
+    "host": "ccxp.cn50wdhqhhzo.us-east-1.rds.amazonaws.com",
+    "port": "5432",
+    "dialect": "postgres",
+    "seederStorage": "sequelize"
+  }
+}
