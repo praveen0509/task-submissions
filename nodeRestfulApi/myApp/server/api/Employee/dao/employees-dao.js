@@ -1,17 +1,15 @@
 import Promise from 'bluebird';
 import models from '../../../models';
-const Employee = require('/home/sb-33/Desktop/myApp/server/models/employee').Employee;
 
 export default class employeesDao {
 
   static getById(id) {
     console.log(id);
-    console.log('employeesDao method Called');
     return new Promise(
       (resolve, reject) => {
-        models.Department.find({})
-          .then(departments => {
-            resolve(departments);
+        models.Employee.find({ where : {id: parseInt(id)} })
+          .then(employees => {
+            resolve(employees);
           });
       });
   }
@@ -31,19 +29,20 @@ export default class employeesDao {
 
 
   static add(body) {
-    console.log('add method called');
+    // console.log('Dao add method called');
     return new Promise((resolve, reject) => {
       models.Employee
         .create({
           empName: body.empName,
-          id: parseInt(body.id)
+          id: body.id
         })
-        .then((employee) => res.status(201).send(employee))
-        .catch((error) => res.status(400).send(error))
+        .then()
+        .catch()
     });
   }
 
   static deleteMember(id){
+    console.log('Delete Method Called');
     return new Promise((resolve,reject) => {
 
       models.Employee.destroy({
@@ -60,7 +59,10 @@ export default class employeesDao {
         });
     });
   }
-  static updateStudent(req,id){
+
+
+  static updateEmployee(req,id){
+    console.log('Update Method Called');
     return new Promise((resolve,reject) => {
       models.Employee.update(
         {
@@ -80,9 +82,6 @@ export default class employeesDao {
         });
     });
   }
-
-
-
 }
 
 

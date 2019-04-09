@@ -3,7 +3,7 @@ import employeesRoutes from '../api/Employee/route/employees-route';
 
 export default class Routes {
    static init(app, router) {
-     console.log('Index Route');
+     // console.log('Index Route');
      employeesRoutes.init(router);
      departmentsRoutes.init(router);
 

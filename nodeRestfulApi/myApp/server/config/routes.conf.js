@@ -19,6 +19,8 @@ export default class RouteConfig {
         application.use(express.static(_root + _nodeModules));
         application.use(express.static(_root + _clientFiles));
         application.use(bodyParser.json());
+        // application.use(bodyParser.urlencoded());
+
         application.use(morgan("dev"));
         application.use(helmet());
     }

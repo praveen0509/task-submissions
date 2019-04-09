@@ -7,14 +7,14 @@ export default class employeesRoute {
     router.route('/employees').get(employeesController.getAll);
     console.log('EmployeeRoute');
     // router.get('/departments', departmentsController.getAll);
-    router.route('/employees/:id').get(employeesController.getById);
+    router.route('/employees/search/:id').get(employeesController.getById);
 
-    router.route('/employees/:add').post(employeesController.add);
+    router.route('/employees/create/:add').post(employeesController.add);
 
     router.route('/employees/delete/:id').delete(employeesController.deleteMember)
     router.route('/employees/update/:id').put(employeesController.updateEmployee)
   }
-  }
+
 }
 
 
