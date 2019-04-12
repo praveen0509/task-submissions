@@ -25,6 +25,7 @@ export default class departmentsController {
 
   static add(req, res){
      let _body = req.body;
+     console.log(req.body);
      departmentsDao.add(_body).then(departments => {
        res.status(200);
        // console.log('DepartmentsController getById method Called');
@@ -54,9 +55,6 @@ export default class departmentsController {
 
 
 }
-
-
-
 
 
 

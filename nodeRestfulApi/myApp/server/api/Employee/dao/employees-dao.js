@@ -61,12 +61,12 @@ export default class employeesDao {
   }
 
 
-  static updateEmployee(req,id){
+  static updateEmployee(body,id){
     console.log('Update Method Called');
     return new Promise((resolve,reject) => {
       models.Employee.update(
         {
-          empName: req.empName
+          empName: body.empName
         },
         {
           where:

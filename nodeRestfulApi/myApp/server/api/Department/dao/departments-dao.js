@@ -32,8 +32,9 @@ export default class departmentsDao {
 
   static add(body) {
     // console.log('DepartmentDao add method called');
+    console.log(body);
     return new Promise((resolve, reject) => {
-      model.Department
+      models.Department
         .create({
           deptName: body.deptName,
           id: parseInt(body.id),
@@ -85,8 +86,6 @@ export default class departmentsDao {
         });
     });
   }
-
-
 }
 
 

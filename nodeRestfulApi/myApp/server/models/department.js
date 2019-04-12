@@ -4,7 +4,7 @@ module.exports = (sequelize, DataTypes) => {
     deptName: DataTypes.STRING,
     employeeId: DataTypes.INTEGER
   }, {});
-  Department.associate = function(models) {
+  Department.associate = function (models) {
     // associations can be defined here
     Department.hasMany(models.Employee, {
       foreignKey: 'id',
@@ -13,4 +13,5 @@ module.exports = (sequelize, DataTypes) => {
 
   };
   return Department;
-};
+}
+
