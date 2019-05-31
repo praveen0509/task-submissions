@@ -1,0 +1,13 @@
+11:58:24 **** Incremental Build of configuration Debug for project CPrograms ****
+make all 
+Building target: CPrograms
+Invoking: GCC C Linker
+gcc  -o "CPrograms"  ./sample.o   
+/usr/lib/gcc/x86_64-linux-gnu/5/../../../x86_64-linux-gnu/crt1.o: In function `_start':
+(.text+0x20): undefined reference to `main'
+makefile:29: recipe for target 'CPrograms' failed
+collect2: error: ld returned 1 exit status
+make: *** [CPrograms] Error 1
+
+11:58:25 Build Finished (took 374ms)
+
