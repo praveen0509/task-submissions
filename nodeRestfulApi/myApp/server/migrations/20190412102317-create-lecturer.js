@@ -22,8 +22,7 @@ module.exports = {
       subjectId: {
         type: Sequelize.INTEGER,
         references: {
-          models: 'Student',
-
+          models: 'Student'
         }
       }
 

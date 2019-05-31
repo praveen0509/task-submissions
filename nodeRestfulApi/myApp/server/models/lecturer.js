@@ -6,8 +6,8 @@ module.exports = (sequelize, DataTypes) => {
   Lecturer.associate = function(models) {
     // associations can be defined here
     Lecturer.belongsToMany(models.Subject, {
-      through: 'lecturers_subjects',
-      foreignKey: 'subjectId'
+      through: 'lecturersSubjects',
+      foreignKey: 'lecturerId'
     })
 
   };

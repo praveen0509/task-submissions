@@ -5,19 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6932e46e-c4f7-4d72-8b32-6a4979fd0bf4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../myApp/server/api/Department/controller/departments-controller.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../myApp/server/api/Department/dao/departments-dao.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../myApp/server/api/Department/route/departments-route.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../myApp/server/api/Employee/controller/employees-controller.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../myApp/server/api/Employee/dao/employees-dao.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../myApp/server/api/Employee/route/employees-route.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../psqlSampleProject/api/Hospital/controller/hospitals-controller.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../psqlSampleProject/api/Hospital/dao/hospitals-dao.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../psqlSampleProject/api/Hospital/route/hospitals-route.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../server/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../myApp/server/migrations/20190412102317-create-lecturer.js" beforeDir="false" afterPath="$PROJECT_DIR$/../myApp/server/migrations/20190412102317-create-lecturer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../myApp/server/models/lecturer.js" beforeDir="false" afterPath="$PROJECT_DIR$/../myApp/server/models/lecturer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../myApp/server/models/subject.js" beforeDir="false" afterPath="$PROJECT_DIR$/../myApp/server/models/subject.js" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -30,7 +20,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="90">
@@ -51,7 +41,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/server.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="75">
@@ -63,7 +53,7 @@
     </leaf>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -133,14 +123,16 @@
       <workItem from="1554274670667" duration="6285000" />
       <workItem from="1554291845371" duration="2546000" />
       <workItem from="1554384842381" duration="1922000" />
+      <workItem from="1555562333481" duration="12000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10753000" />
+    <option name="totallyTimeSpent" value="10765000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="65" y="-4" width="1301" height="772" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24960877" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -173,13 +165,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/index.html">
+    <entry file="file://$PROJECT_DIR$/server.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
-          <folding>
-            <element signature="n#style#0;n#h1#0;n#!!top" expanded="true" />
-          </folding>
+        <state relative-caret-position="75">
+          <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
         </state>
       </provider>
     </entry>
@@ -190,10 +179,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/server.js">
+    <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="31" selection-start-line="5" selection-start-column="31" selection-end-line="5" selection-end-column="31" />
+        <state relative-caret-position="90">
+          <caret line="6" column="30" selection-start-line="6" selection-start-column="30" selection-end-line="6" selection-end-column="30" />
+          <folding>
+            <element signature="n#style#0;n#h1#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
